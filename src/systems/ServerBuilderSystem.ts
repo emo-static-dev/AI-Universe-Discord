@@ -4,10 +4,13 @@ import {
   CategoryChannel,
   TextChannel,
   VoiceChannel,
+  ForumChannel,
+  StageChannel,
   ChannelType,
   PermissionFlagsBits,
   Role,
-  OverwriteResolvable,
+  ChannelResolvable,
+  Collection,
 } from 'discord.js';
 import { readFileSync } from 'fs';
 import { createLogger } from '../utils/logger.js';
@@ -19,42 +22,64 @@ const __dirname = path.dirname(__filename);
 
 const logger = createLogger('ServerBuilder');
 
-interface Channel {
+/**
+ * Channel configuration interface
+ */
+interface ChannelConfig {
   name: string;
-  type: 'text' | 'voice';
+  type: 'text' | 'voice' | 'forum' | 'stage';
+  topic?: string;
   description?: string;
+  nsfw?: boolean;
   private?: boolean;
+  permissions?: {
+    allow?: string[];
+    deny?: string[];
+  };
 }
 
-interface Category {
+/**
+ * Category configuration interface
+ */
+interface CategoryConfig {
   id: string;
   name: string;
-  channels: Channel[];
+  position?: number;
+  channels: ChannelConfig[];
+  permissions?: {
+    allow?: string[];
+    deny?: string[];
+  };
 }
 
+/**
+ * Role configuration interface
+ */
 interface RoleConfig {
   name: string;
   color: string;
   permissions: string[];
   tier: string;
+  hoist?: boolean;
+  mentionable?: boolean;
 }
 
+/**
+ * Server structure configuration interface
+ */
 interface ServerStructure {
   serverName: string;
   serverDescription: string;
-  categories: Category[];
+  categories: CategoryConfig[];
   roles: {
     hierarchy: RoleConfig[];
   };
 }
 
 /**
- * Server Builder System
- * Handles automated creation of Discord server structure including:
- * - Categories with custom names and emojis
- * - Text and voice channels
- * - Roles with proper hierarchy
- * - Permission overwrites
+ * Advanced Server Builder System
+ * Handles complete automated creation and configuration of Discord servers
+ * with categories, channels, roles, and permissions
  */
 export class ServerBuilderSystem {
   private client: Client;
@@ -62,6 +87,12 @@ export class ServerBuilderSystem {
   private logger = logger;
   private config: ServerStructure;
   private createdRoles: Map<string, Role> = new Map();
+  private createdCategories: Map<string, CategoryChannel> = new Map();
+  private createdChannels: Map<string, TextChannel | VoiceChannel | ForumChannel | StageChannel> = new Map();
+
+  // Rate limit configuration
+  private readonly RATE_LIMIT_DELAY = 1000; // 1 second between operations
+  private lastApiCall: number = 0;
 
   constructor(client: Client, guild: Guild) {
     this.client = client;
@@ -86,27 +117,71 @@ export class ServerBuilderSystem {
   }
 
   /**
-   * Main method to build the entire server structure
+   * Respect Discord rate limits
    */
-  async buildServerStructure(): Promise<void> {
-    try {
-      this.logger.info(`🚀 Starting server build for guild: ${this.guild.name}`);
+  private async respectRateLimit(): Promise<void> {
+    const now = Date.now();
+    const timeSinceLastCall = now - this.lastApiCall;
+    if (timeSinceLastCall < this.RATE_LIMIT_DELAY) {
+      await new Promise((resolve) =>
+        setTimeout(resolve, this.RATE_LIMIT_DELAY - timeSinceLastCall)
+      );
+    }
+    this.lastApiCall = Date.now();
+  }
 
-      // Step 1: Create roles
-      this.logger.info('📋 Step 1/3: Creating roles...');
+  /**
+   * Main orchestration method to build complete server structure
+   */
+  async buildServer(): Promise<void> {
+    try {
+      this.logger.info(`🌌 Starting complete server build for: ${this.guild.name}`);
+      this.logger.info('═'.repeat(60));
+
+      // Step 1: Create Branding
+      await this.createServerBranding();
+
+      // Step 2: Create Roles
       await this.createRoles();
 
-      // Step 2: Create categories and channels
-      this.logger.info('📂 Step 2/3: Creating categories and channels...');
-      await this.createCategoriesAndChannels();
+      // Step 3: Create Categories
+      await this.createCategories();
 
-      // Step 3: Configure permissions
-      this.logger.info('🔐 Step 3/3: Configuring permissions...');
-      await this.configurePermissions();
+      // Step 4: Create Channels
+      await this.createChannels();
 
-      this.logger.info('✅ Server structure built successfully!');
+      // Step 5: Setup Permissions
+      await this.setupPermissions();
+
+      this.logger.info('═'.repeat(60));
+      this.logger.info('✅ Server build completed successfully!');
+      const summary = await this.getServerSummary();
+      this.logger.info(summary);
     } catch (error) {
-      this.logger.error('Error building server structure:', error);
+      this.logger.error('❌ Fatal error during server build:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Create server branding (name and description)
+   */
+  async createServerBranding(): Promise<void> {
+    try {
+      this.logger.info('🎨 Step 1/5: Creating server branding...');
+
+      await this.respectRateLimit();
+      await this.guild.edit(
+        {
+          name: this.config.serverName,
+          description: this.config.serverDescription,
+        },
+        'AI Universe Server Builder'
+      );
+
+      this.logger.info(`🌌 Server branded as: "${this.config.serverName}"`);
+    } catch (error) {
+      this.logger.error('Error creating server branding:', error);
       throw error;
     }
   }
@@ -114,41 +189,47 @@ export class ServerBuilderSystem {
   /**
    * Create all roles from configuration
    */
-  private async createRoles(): Promise<void> {
+  async createRoles(): Promise<void> {
     try {
-      const existingRoles = new Set(this.guild.roles.cache.map((r) => r.name));
+      this.logger.info('👑 Step 2/5: Creating roles with hierarchy...');
+
+      const existingRoles = new Map(
+        this.guild.roles.cache.map((r) => [r.name, r])
+      );
+      let createdCount = 0;
+      let skippedCount = 0;
 
       for (const roleConfig of this.config.roles.hierarchy) {
         try {
-          // Skip if role already exists
+          // Check if role already exists
           if (existingRoles.has(roleConfig.name)) {
-            this.logger.info(`⏭️  Role already exists: ${roleConfig.name}`);
-            const existingRole = this.guild.roles.cache.find(
-              (r) => r.name === roleConfig.name
-            );
-            if (existingRole) {
-              this.createdRoles.set(roleConfig.name, existingRole);
-            }
+            this.logger.info(`⏭️  Role exists: ${roleConfig.name}`);
+            this.createdRoles.set(roleConfig.name, existingRoles.get(roleConfig.name)!);
+            skippedCount++;
             continue;
           }
 
-          // Create role with configuration
+          await this.respectRateLimit();
+
           const role = await this.guild.roles.create({
             name: roleConfig.name,
             color: roleConfig.color,
             permissions: this.parsePermissions(roleConfig.permissions),
-            reason: 'AI Universe Server Builder',
+            hoist: roleConfig.hoist !== false,
+            mentionable: roleConfig.mentionable !== false,
+            reason: 'AI Universe Server Builder - Role Creation',
           });
 
           this.createdRoles.set(roleConfig.name, role);
           this.logger.info(`✅ Created role: ${roleConfig.name}`);
+          createdCount++;
         } catch (error) {
-          this.logger.error(`Failed to create role ${roleConfig.name}:`, error);
+          this.logger.error(`Failed to create role "${roleConfig.name}":`, error);
         }
       }
 
       this.logger.info(
-        `✅ Role creation complete. Total roles: ${this.createdRoles.size}`
+        `📊 Roles complete - Created: ${createdCount}, Skipped: ${skippedCount}`
       );
     } catch (error) {
       this.logger.error('Error creating roles:', error);
@@ -157,154 +238,251 @@ export class ServerBuilderSystem {
   }
 
   /**
-   * Create categories and channels
+   * Create all categories from configuration
    */
-  private async createCategoriesAndChannels(): Promise<void> {
+  async createCategories(): Promise<void> {
     try {
+      this.logger.info('📂 Step 3/5: Creating categories...');
+
+      const existingCategories = new Map(
+        this.guild.channels.cache
+          .filter((c) => c.type === ChannelType.GuildCategory)
+          .map((c) => [c.name, c])
+      );
+
+      let createdCount = 0;
+      let skippedCount = 0;
+
       for (const categoryConfig of this.config.categories) {
         try {
-          // Check if category already exists
-          let category = this.guild.channels.cache.find(
-            (c) => c.name === categoryConfig.name && c.type === ChannelType.GuildCategory
-          ) as CategoryChannel | undefined;
+          let category: CategoryChannel | undefined;
 
-          if (!category) {
+          // Check if category already exists
+          if (existingCategories.has(categoryConfig.name)) {
+            category = existingCategories.get(categoryConfig.name) as CategoryChannel;
+            this.logger.info(`⏭️  Category exists: ${categoryConfig.name}`);
+            skippedCount++;
+          } else {
+            await this.respectRateLimit();
+
             category = (await this.guild.channels.create({
               name: categoryConfig.name,
               type: ChannelType.GuildCategory,
-              reason: 'AI Universe Server Builder',
+              position: categoryConfig.position,
+              reason: 'AI Universe Server Builder - Category Creation',
             })) as CategoryChannel;
+
             this.logger.info(`✅ Created category: ${categoryConfig.name}`);
-          } else {
-            this.logger.info(`⏭️  Category already exists: ${categoryConfig.name}`);
+            createdCount++;
           }
 
-          // Create channels in this category
-          await this.createChannelsInCategory(category, categoryConfig.channels);
+          this.createdCategories.set(categoryConfig.id, category);
         } catch (error) {
           this.logger.error(
-            `Error creating category ${categoryConfig.name}:`,
+            `Failed to create category "${categoryConfig.name}":`,
             error
           );
         }
       }
 
-      this.logger.info('✅ Category and channel creation complete');
+      this.logger.info(
+        `📊 Categories complete - Created: ${createdCount}, Skipped: ${skippedCount}`
+      );
     } catch (error) {
-      this.logger.error('Error creating categories and channels:', error);
+      this.logger.error('Error creating categories:', error);
       throw error;
     }
   }
 
   /**
-   * Create channels within a category
+   * Create all channels from configuration
    */
-  private async createChannelsInCategory(
-    category: CategoryChannel,
-    channelConfigs: Channel[]
-  ): Promise<void> {
-    for (const channelConfig of channelConfigs) {
-      try {
-        // Check if channel already exists
-        const existingChannel = this.guild.channels.cache.find(
-          (c) => c.name === channelConfig.name && c.parentId === category.id
-        );
+  async createChannels(): Promise<void> {
+    try {
+      this.logger.info('🔧 Step 4/5: Creating channels...');
 
-        if (existingChannel) {
-          this.logger.info(`⏭️  Channel already exists: ${channelConfig.name}`);
+      let createdCount = 0;
+      let skippedCount = 0;
+
+      for (const categoryConfig of this.config.categories) {
+        const category = this.createdCategories.get(categoryConfig.id);
+
+        if (!category) {
+          this.logger.warn(`Category not found for: ${categoryConfig.name}`);
           continue;
         }
 
-        const channelType =
-          channelConfig.type === 'voice'
-            ? ChannelType.GuildVoice
-            : ChannelType.GuildText;
-
-        const channel = await this.guild.channels.create({
-          name: channelConfig.name,
-          type: channelType,
-          parent: category.id,
-          topic: channelConfig.description || undefined,
-          reason: 'AI Universe Server Builder',
-        });
-
-        this.logger.info(`✅ Created channel: ${channelConfig.name}`);
-      } catch (error) {
-        this.logger.error(
-          `Error creating channel ${channelConfig.name}:`,
-          error
-        );
-      }
-    }
-  }
-
-  /**
-   * Configure channel permissions for staff and private channels
-   */
-  private async configurePermissions(): Promise<void> {
-    try {
-      const staffRole = this.createdRoles.get('🛡️・Guardian Moderator');
-      const memberRole = this.guild.roles.cache.find(
-        (r) => r.name === '⭐・Verified Member'
-      );
-
-      if (!staffRole) {
-        this.logger.warn('Staff role not found, skipping permission configuration');
-        return;
-      }
-
-      for (const category of this.config.categories) {
-        const guildCategory = this.guild.channels.cache.find(
-          (c) => c.name === category.name && c.type === ChannelType.GuildCategory
+        // Get existing channels in this category
+        const existingChannels = new Map(
+          this.guild.channels.cache
+            .filter((c) => c.parentId === category.id)
+            .map((c) => [c.name, c])
         );
 
-        if (!guildCategory) continue;
-
-        for (const channelConfig of category.channels) {
-          if (!channelConfig.private) continue;
-
-          const channel = this.guild.channels.cache.find(
-            (c) =>
-              c.name === channelConfig.name &&
-              c.parentId === guildCategory.id
-          );
-
-          if (!channel) continue;
-
+        for (const channelConfig of categoryConfig.channels) {
           try {
-            // Remove @everyone permissions
-            await channel.permissionOverwrites.create(
-              this.guild.roles.everyone,
-              {
-                ViewChannel: false,
-                SendMessages: false,
-              }
-            );
-
-            // Grant staff access
-            if (staffRole) {
-              await channel.permissionOverwrites.create(staffRole, {
-                ViewChannel: true,
-                SendMessages: true,
-                ManageMessages: true,
-              });
+            // Check if channel already exists
+            if (existingChannels.has(channelConfig.name)) {
+              this.logger.info(
+                `⏭️  Channel exists: ${channelConfig.name}`
+              );
+              skippedCount++;
+              continue;
             }
 
-            this.logger.info(`🔐 Configured permissions for: ${channelConfig.name}`);
+            await this.respectRateLimit();
+
+            const channelType = this.getChannelType(channelConfig.type);
+            const channel = await this.guild.channels.create({
+              name: channelConfig.name,
+              type: channelType,
+              parent: category.id,
+              topic: channelConfig.topic || channelConfig.description || undefined,
+              nsfw: channelConfig.nsfw || false,
+              reason: 'AI Universe Server Builder - Channel Creation',
+            });
+
+            this.createdChannels.set(
+              `${category.name}/${channel.name}`,
+              channel as TextChannel | VoiceChannel | ForumChannel | StageChannel
+            );
+
+            this.logger.info(`✅ Created ${channelConfig.type} channel: ${channelConfig.name}`);
+            createdCount++;
           } catch (error) {
             this.logger.error(
-              `Error configuring permissions for ${channelConfig.name}:`,
+              `Failed to create channel "${channelConfig.name}":`,
               error
             );
           }
         }
       }
 
-      this.logger.info('✅ Permission configuration complete');
+      this.logger.info(
+        `📊 Channels complete - Created: ${createdCount}, Skipped: ${skippedCount}`
+      );
     } catch (error) {
-      this.logger.error('Error configuring permissions:', error);
+      this.logger.error('Error creating channels:', error);
       throw error;
     }
+  }
+
+  /**
+   * Setup permissions for channels and roles
+   */
+  async setupPermissions(): Promise<void> {
+    try {
+      this.logger.info('🔐 Step 5/5: Configuring permissions...');
+
+      let configuredCount = 0;
+
+      for (const categoryConfig of this.config.categories) {
+        const category = this.createdCategories.get(categoryConfig.id);
+        if (!category) continue;
+
+        for (const channelConfig of categoryConfig.channels) {
+          const channel = this.guild.channels.cache.find(
+            (c) =>
+              c.name === channelConfig.name &&
+              c.parentId === category.id
+          );
+
+          if (!channel) continue;
+
+          try {
+            await this.respectRateLimit();
+
+            // If channel is marked as private, restrict access
+            if (channelConfig.private) {
+              await this.setupPrivateChannelPermissions(channel);
+            }
+
+            // Apply custom permissions if specified
+            if (channelConfig.permissions) {
+              await this.applyCustomPermissions(
+                channel,
+                channelConfig.permissions
+              );
+            }
+
+            this.logger.info(`🔐 Configured permissions: ${channelConfig.name}`);
+            configuredCount++;
+          } catch (error) {
+            this.logger.error(
+              `Failed to configure permissions for "${channelConfig.name}":`,
+              error
+            );
+          }
+        }
+      }
+
+      this.logger.info(`📊 Permissions configured for ${configuredCount} channels`);
+    } catch (error) {
+      this.logger.error('Error setting up permissions:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Setup private channel permissions (restrict to staff only)
+   */
+  private async setupPrivateChannelPermissions(
+    channel: ChannelResolvable
+  ): Promise<void> {
+    const staffRole = this.createdRoles.get('🛡️・Guardian Moderator');
+
+    await this.respectRateLimit();
+
+    // Remove @everyone access
+    await this.guild.channels.cache.get(channel as string)?.permissionOverwrites.create(
+      this.guild.roles.everyone,
+      {
+        ViewChannel: false,
+        SendMessages: false,
+        Connect: false,
+      }
+    );
+
+    // Grant staff access
+    if (staffRole) {
+      await this.respectRateLimit();
+
+      await this.guild.channels.cache.get(channel as string)?.permissionOverwrites.create(
+        staffRole,
+        {
+          ViewChannel: true,
+          SendMessages: true,
+          Connect: true,
+          ManageMessages: true,
+          ManageChannels: true,
+        }
+      );
+    }
+  }
+
+  /**
+   * Apply custom permissions from configuration
+   */
+  private async applyCustomPermissions(
+    channel: ChannelResolvable,
+    permissions: { allow?: string[]; deny?: string[] }
+  ): Promise<void> {
+    const channelObj = this.guild.channels.cache.get(channel as string);
+    if (!channelObj) return;
+
+    const allowPerms = this.parsePermissions(permissions.allow || []);
+    const denyPerms = this.parsePermissions(permissions.deny || []);
+
+    await this.respectRateLimit();
+
+    // Apply to everyone role
+    await channelObj.permissionOverwrites.create(
+      this.guild.roles.everyone,
+      {
+        allow: allowPerms,
+        deny: denyPerms,
+      }
+    );
   }
 
   /**
@@ -321,18 +499,26 @@ export class ServerBuilderSystem {
       manage_messages: PermissionFlagsBits.ManageMessages,
       manage_nicknames: PermissionFlagsBits.ManageNicknames,
       manage_webhooks: PermissionFlagsBits.ManageWebhooks,
+      manage_emojis: PermissionFlagsBits.ManageEmojisAndStickers,
+      manage_events: PermissionFlagsBits.ManageEvents,
       ban_members: PermissionFlagsBits.BanMembers,
       kick_members: PermissionFlagsBits.KickMembers,
       moderate_members: PermissionFlagsBits.ModerateMembers,
       send_messages: PermissionFlagsBits.SendMessages,
-      read_messages: PermissionFlagsBits.ViewChannel,
       view_channel: PermissionFlagsBits.ViewChannel,
+      read_messages: PermissionFlagsBits.ViewChannel,
       embed_links: PermissionFlagsBits.EmbedLinks,
       attach_files: PermissionFlagsBits.AttachFiles,
       add_reactions: PermissionFlagsBits.AddReactions,
+      use_slash_commands: PermissionFlagsBits.UseApplicationCommands,
       connect: PermissionFlagsBits.Connect,
       speak: PermissionFlagsBits.Speak,
       stream: PermissionFlagsBits.Stream,
+      use_voice_activation: PermissionFlagsBits.UseVAD,
+      priority_speaker: PermissionFlagsBits.PrioritySpeaker,
+      mute_members: PermissionFlagsBits.MuteMembers,
+      deafen_members: PermissionFlagsBits.DeafenMembers,
+      move_members: PermissionFlagsBits.MoveMembers,
     };
 
     for (const perm of permissions) {
@@ -345,9 +531,22 @@ export class ServerBuilderSystem {
   }
 
   /**
-   * Get a summary of the created structure
+   * Get Discord channel type from string configuration
    */
-  async getSummary(): Promise<string> {
+  private getChannelType(type: string): ChannelType {
+    const typeMap: Record<string, ChannelType> = {
+      text: ChannelType.GuildText,
+      voice: ChannelType.GuildVoice,
+      forum: ChannelType.GuildForum,
+      stage: ChannelType.GuildStageVoice,
+    };
+    return typeMap[type] || ChannelType.GuildText;
+  }
+
+  /**
+   * Get a summary of the created server structure
+   */
+  async getServerSummary(): Promise<string> {
     const categories = this.guild.channels.cache.filter(
       (c) => c.type === ChannelType.GuildCategory
     ).size;
@@ -357,38 +556,64 @@ export class ServerBuilderSystem {
     const voiceChannels = this.guild.channels.cache.filter(
       (c) => c.type === ChannelType.GuildVoice
     ).size;
+    const forumChannels = this.guild.channels.cache.filter(
+      (c) => c.type === ChannelType.GuildForum
+    ).size;
     const roles = this.guild.roles.cache.size;
 
     return `
-📊 **AI Universe Server Summary**
-├─ Categories: ${categories}
-├─ Text Channels: ${textChannels}
-├─ Voice Channels: ${voiceChannels}
-└─ Roles: ${roles}
+╔════════════════════════════════════════╗
+║  🌌 AI UNIVERSE SERVER SUMMARY          ║
+╠════════════════════════════════════════╣
+║ 📂 Categories:      ${String(categories).padStart(25, ' ')} ║
+║ 💬 Text Channels:   ${String(textChannels).padStart(25, ' ')} ║
+║ 🎙️  Voice Channels:  ${String(voiceChannels).padStart(25, ' ')} ║
+║ 💭 Forum Channels:  ${String(forumChannels).padStart(25, ' ')} ║
+║ 👑 Roles:          ${String(roles).padStart(25, ' ')} ║
+╚════════════���═══════════════════════════╝
     `;
   }
 
   /**
    * Reset the server structure (delete all created channels and roles)
-   * WARNING: This is destructive and cannot be undone
+   * ⚠️ WARNING: This is destructive and cannot be undone
    */
   async resetServerStructure(): Promise<void> {
     try {
       this.logger.warn('⚠️  Starting server reset...');
+      this.logger.warn('This action cannot be undone!');
 
-      // Delete all channels in categories
-      for (const category of this.config.categories) {
-        const guildCategory = this.guild.channels.cache.find(
-          (c) => c.name === category.name
-        );
-        if (guildCategory) {
-          await guildCategory.delete('Server reset');
+      // Delete all created channels
+      for (const channel of this.createdChannels.values()) {
+        try {
+          await this.respectRateLimit();
+          await channel.delete('Server reset by admin');
+          this.logger.info(`🗑️  Deleted channel: ${channel.name}`);
+        } catch (error) {
+          this.logger.error(`Failed to delete channel ${channel.name}:`, error);
+        }
+      }
+
+      // Delete all categories
+      for (const category of this.createdCategories.values()) {
+        try {
+          await this.respectRateLimit();
+          await category.delete('Server reset by admin');
+          this.logger.info(`🗑️  Deleted category: ${category.name}`);
+        } catch (error) {
+          this.logger.error(`Failed to delete category ${category.name}:`, error);
         }
       }
 
       // Delete all created roles
       for (const role of this.createdRoles.values()) {
-        await role.delete('Server reset');
+        try {
+          await this.respectRateLimit();
+          await role.delete('Server reset by admin');
+          this.logger.info(`🗑️  Deleted role: ${role.name}`);
+        } catch (error) {
+          this.logger.error(`Failed to delete role ${role.name}:`, error);
+        }
       }
 
       this.logger.info('✅ Server structure reset complete');
@@ -396,6 +621,24 @@ export class ServerBuilderSystem {
       this.logger.error('Error resetting server structure:', error);
       throw error;
     }
+  }
+
+  /**
+   * Get statistics about the server
+   */
+  getStatistics() {
+    return {
+      roles: {
+        total: this.guild.roles.cache.size,
+        created: this.createdRoles.size,
+      },
+      channels: {
+        total: this.guild.channels.cache.size,
+        created: this.createdChannels.size,
+        categories: this.createdCategories.size,
+      },
+      members: this.guild.memberCount,
+    };
   }
 }
 
