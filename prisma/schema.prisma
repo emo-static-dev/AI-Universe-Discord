@@ -1,0 +1,386 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+// User & Member Models
+// ============================================
+
+model User {
+  id            String          @id @default(cuid())
+  discordId     String          @unique
+  username      String
+  email         String?
+  avatar        String?
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  
+  // Relations
+  member        Member?
+  warnings      Warning[]
+  tickets       Ticket[]
+  economy       Economy?
+  
+  @@index([discordId])
+}
+
+model Member {
+  id            String          @id @default(cuid())
+  userId        String          @unique
+  user          User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  guildId       String
+  nickname      String?
+  joinedAt      DateTime        @default(now())
+  roles         String[]        // Discord role IDs
+  level         Int             @default(1)
+  xp            Int             @default(0)
+  points        Int             @default(0)
+  isBanned      Boolean         @default(false)
+  isMuted       Boolean         @default(false)
+  banReason     String?
+  muteUntil     DateTime?
+  
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  
+  @@unique([guildId, userId])
+  @@index([guildId])
+  @@index([level])
+}
+
+// ============================================
+// Economy System
+// ============================================
+
+model Economy {
+  id            String          @id @default(cuid())
+  userId        String          @unique
+  user          User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  balance       Int             @default(0)
+  bank          Int             @default(0)
+  totalEarned   Int             @default(0)
+  totalSpent    Int             @default(0)
+  
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  
+  @@index([userId])
+}
+
+model Transaction {
+  id            String          @id @default(cuid())
+  fromUserId    String
+  toUserId      String?
+  amount        Int
+  type          String          // "transfer", "reward", "purchase", "penalty"
+  description   String?
+  
+  createdAt     DateTime        @default(now())
+  
+  @@index([fromUserId])
+  @@index([toUserId])
+  @@index([createdAt])
+}
+
+// ============================================
+// Moderation System
+// ============================================
+
+model Warning {
+  id            String          @id @default(cuid())
+  userId        String
+  user          User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  moderatorId   String
+  reason        String
+  severity      String          @default("low") // low, medium, high, critical
+  count         Int             @default(1)
+  active        Boolean         @default(true)
+  
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  expiresAt     DateTime?
+  
+  @@index([userId])
+  @@index([moderatorId])
+  @@index([active])
+}
+
+model ModerationLog {
+  id            String          @id @default(cuid())
+  guildId       String
+  userId        String?
+  moderatorId   String?
+  
+  action        String          // "warn", "kick", "ban", "mute", "unban", "unmute"
+  reason        String?
+  duration      Int?            // in minutes
+  
+  createdAt     DateTime        @default(now())
+  
+  @@index([guildId])
+  @@index([userId])
+  @@index([action])
+  @@index([createdAt])
+}
+
+// ============================================
+// Ticket System
+// ============================================
+
+model Ticket {
+  id            String          @id @default(cuid())
+  userId        String
+  user          User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  guildId       String
+  channelId     String
+  ticketNumber  Int
+  
+  subject       String
+  description   String
+  status        String          @default("open") // open, in-progress, resolved, closed
+  priority      String          @default("normal") // low, normal, high, urgent
+  
+  assignedTo    String?
+  
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  closedAt      DateTime?
+  
+  messages      TicketMessage[]
+  
+  @@unique([guildId, ticketNumber])
+  @@index([guildId])
+  @@index([userId])
+  @@index([status])
+}
+
+model TicketMessage {
+  id            String          @id @default(cuid())
+  ticketId      String
+  ticket        Ticket          @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  
+  userId        String
+  content       String
+  
+  createdAt     DateTime        @default(now())
+  
+  @@index([ticketId])
+  @@index([userId])
+}
+
+// ============================================
+// Leveling & Achievement System
+// ============================================
+
+model Achievement {
+  id            String          @id @default(cuid())
+  name          String
+  description   String
+  icon          String?
+  requirement   Int
+  type          String          // "xp", "messages", "votes", "custom"
+  
+  createdAt     DateTime        @default(now())
+  
+  @@unique([name])
+}
+
+model UserAchievement {
+  id            String          @id @default(cuid())
+  userId        String
+  achievementId String
+  
+  unlockedAt    DateTime        @default(now())
+  
+  @@unique([userId, achievementId])
+  @@index([userId])
+}
+
+// ============================================
+// Giveaway System
+// ============================================
+
+model Giveaway {
+  id            String          @id @default(cuid())
+  guildId       String
+  channelId     String
+  messageId     String?
+  
+  title         String
+  description   String?
+  prize         String
+  winners       Int             @default(1)
+  
+  startedAt     DateTime        @default(now())
+  endsAt        DateTime
+  ended         Boolean         @default(false)
+  
+  entries       GiveawayEntry[]
+  
+  createdAt     DateTime        @default(now())
+  
+  @@index([guildId])
+  @@index([endsAt])
+  @@index([ended])
+}
+
+model GiveawayEntry {
+  id            String          @id @default(cuid())
+  giveawayId    String
+  giveaway      Giveaway        @relation(fields: [giveawayId], references: [id], onDelete: Cascade)
+  
+  userId        String
+  
+  createdAt     DateTime        @default(now())
+  
+  @@unique([giveawayId, userId])
+  @@index([giveawayId])
+}
+
+// ============================================
+// Role & Permission System
+// ============================================
+
+model Role {
+  id            String          @id @default(cuid())
+  guildId       String
+  discordRoleId String
+  
+  name          String
+  color         String?
+  permissions   String[]
+  tier          String          // "owner", "management", "moderator", "specialist", "member"
+  
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  
+  @@unique([guildId, discordRoleId])
+  @@index([guildId])
+}
+
+// ============================================
+// Guild Configuration
+// ============================================
+
+model GuildConfig {
+  id            String          @id @default(cuid())
+  guildId       String          @unique
+  
+  prefix        String          @default("!")
+  language      String          @default("en")
+  timezone      String          @default("UTC")
+  
+  // Feature Toggles
+  autoModeration    Boolean     @default(true)
+  leveling          Boolean     @default(true)
+  economy           Boolean     @default(true)
+  tickets           Boolean     @default(true)
+  
+  // Channel IDs
+  welcomeChannelId      String?
+  logsChannelId         String?
+  modLogsChannelId      String?
+  ticketsChannelId      String?
+  
+  // Settings
+  maxWarnings       Int         @default(3)
+  muteRoleName      String      @default("Muted")
+  verificationRole  String?
+  
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  
+  @@index([guildId])
+}
+
+// ============================================
+// AI Features
+// ============================================
+
+model AIPrompt {
+  id            String          @id @default(cuid())
+  userId        String
+  
+  title         String
+  content       String
+  category      String          // "creative", "technical", "business", "educational"
+  tags          String[]
+  rating        Int             @default(0)
+  uses          Int             @default(0)
+  
+  public        Boolean         @default(false)
+  
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  
+  @@index([userId])
+  @@index([category])
+  @@index([public])
+}
+
+model AIConversation {
+  id            String          @id @default(cuid())
+  userId        String
+  guildId       String
+  
+  messages      String[]        // Serialized conversation
+  model         String          @default("gpt-3.5-turbo")
+  tokens        Int             @default(0)
+  
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  
+  @@index([userId])
+  @@index([guildId])
+}
+
+// ============================================
+// Event & Activity Logging
+// ============================================
+
+model Activity {
+  id            String          @id @default(cuid())
+  guildId       String
+  userId        String?
+  
+  action        String
+  details       String?
+  metadata      String?         // JSON string
+  
+  createdAt     DateTime        @default(now())
+  
+  @@index([guildId])
+  @@index([userId])
+  @@index([action])
+  @@index([createdAt])
+}
+
+// ============================================
+// Dashboard & API Models
+// ============================================
+
+model DashboardSession {
+  id            String          @id @default(cuid())
+  userId        String
+  token         String          @unique
+  
+  expiresAt     DateTime
+  isActive      Boolean         @default(true)
+  
+  createdAt     DateTime        @default(now())
+  
+  @@index([userId])
+  @@index([expiresAt])
+}
