@@ -10,34 +10,34 @@
           "name": "👋・welcome",
           "type": "text",
           "topic": "Welcome to AI Universe"
-        },,
+        },
         {
           "name": "📜・rules",
           "type": "text",
           "topic": "Server rules and guidelines"
-        },,
+        },
         {
           "name": "📢・announcements",
           "type": "text",
           "topic": "Official announcements"
-        },,
+        },
         {
           "name": "📰・ai-news",
           "type": "text",
           "topic": "Latest AI news"
-        },,
+        },
         {
           "name": "🎭・roles",
           "type": "text",
           "topic": "Choose your AI roles"
-        },,
+        },
         {
           "name": "💡・suggestions",
           "type": "text",
           "topic": "Community suggestions"
         },
       ]
-    },,
+    },
     {
       "id": "core",
       "name": "🤖・AI CORE LAB",
@@ -46,34 +46,34 @@
           "name": "🤖・ai-general",
           "type": "text",
           "topic": "General AI discussions"
-        },,
+        },
         {
           "name": "🧠・future-ai",
           "type": "text",
           "topic": "Future AI technology"
-        },,
+        },
         {
           "name": "🪄・prompt-engineering",
           "type": "text",
           "topic": "AI prompts and techniques"
-        },,
+        },
         {
           "name": "🔥・ai-trends",
           "type": "text",
           "topic": "Current AI trends"
-        },,
+        },
         {
           "name": "🔮・ai-predictions",
           "type": "text",
           "topic": "Predictions about AI"
-        },,
+        },
         {
           "name": "❓・ai-help",
           "type": "text",
           "topic": "AI questions and help"
         },
       ]
-    },,
+    },
     {
       "id": "machine-learning",
       "name": "🧬・MACHINE LEARNING",
@@ -82,34 +82,34 @@
           "name": "🧬・ml-general",
           "type": "text",
           "topic": "Machine learning discussions"
-        },,
+        },
         {
           "name": "🧠・neural-networks",
           "type": "text",
           "topic": "Neural network research"
-        },,
+        },
         {
           "name": "📊・algorithms",
           "type": "text",
           "topic": "ML algorithms"
-        },,
+        },
         {
           "name": "🔗・deep-learning",
           "type": "text",
           "topic": "Deep learning"
-        },,
+        },
         {
           "name": "🎯・training-models",
           "type": "text",
           "topic": "Model training"
-        },,
+        },
         {
           "name": "⚡・optimization",
           "type": "text",
           "topic": "Optimization techniques"
         },
       ]
-    },,
+    },
     {
       "id": "nlp",
       "name": "💬・NLP UNIVERSE",
@@ -118,34 +118,34 @@
           "name": "💬・nlp-general",
           "type": "text",
           "topic": "Natural language processing"
-        },,
+        },
         {
           "name": "🗣️・language-models",
           "type": "text",
           "topic": "Language models"
-        },,
+        },
         {
           "name": "📝・text-generation",
           "type": "text",
           "topic": "AI text generation"
-        },,
+        },
         {
           "name": "🌐・translation-ai",
           "type": "text",
           "topic": "AI translation"
-        },,
+        },
         {
           "name": "🎤・speech-ai",
           "type": "text",
           "topic": "Speech recognition"
-        },,
+        },
         {
           "name": "🤖・chatbots",
           "type": "text",
           "topic": "AI chatbot development"
         },
       ]
-    },,
+    },
     {
       "id": "computer-vision",
       "name": "👁️・COMPUTER VISION",
@@ -154,34 +154,34 @@
           "name": "👁️・vision-general",
           "type": "text",
           "topic": "Computer vision"
-        },,
+        },
         {
           "name": "📷・image-processing",
           "type": "text",
           "topic": "Image processing"
-        },,
+        },
         {
           "name": "🎨・image-generation",
           "type": "text",
           "topic": "AI image generation"
-        },,
+        },
         {
           "name": "🎬・video-ai",
           "type": "text",
           "topic": "AI video analysis"
-        },,
+        },
         {
           "name": "🔍・object-detection",
           "type": "text",
           "topic": "Object detection"
-        },,
+        },
         {
           "name": "🖼️・ai-gallery",
           "type": "text",
           "topic": "AI artwork showcase"
         },
       ]
-    },,
+    },
     {
       "id": "llm",
       "name": "🔮・LARGE LANGUAGE MODELS",
@@ -190,34 +190,34 @@
           "name": "🔮・llm-chat",
           "type": "text",
           "topic": "Large language models"
-        },,
+        },
         {
           "name": "🤖・gpt-models",
           "type": "text",
           "topic": "GPT discussions"
-        },,
+        },
         {
           "name": "🦙・open-source-models",
           "type": "text",
           "topic": "Open source LLMs"
-        },,
+        },
         {
           "name": "⚙️・fine-tuning",
           "type": "text",
           "topic": "Fine tuning models"
-        },,
+        },
         {
           "name": "💾・model-storage",
           "type": "text",
           "topic": "Model management"
-        },,
+        },
         {
           "name": "🛡️・llm-safety",
           "type": "text",
           "topic": "LLM safety"
         },
       ]
-    },,
+    },
     {
       "id": "creative-ai",
       "name": "🎨・CREATIVE AI STUDIO",
@@ -226,34 +226,34 @@
           "name": "🎨・creative-ai",
           "type": "text",
           "topic": "Creative AI projects"
-        },,
+        },
         {
           "name": "🖼️・ai-art",
           "type": "text",
           "topic": "AI generated art"
-        },,
+        },
         {
           "name": "🎬・ai-video",
           "type": "text",
           "topic": "AI video creation"
-        },,
+        },
         {
           "name": "🎵・ai-music",
           "type": "text",
           "topic": "AI music generation"
-        },,
+        },
         {
           "name": "✍️・ai-writing",
           "type": "text",
           "topic": "AI writing tools"
-        },,
+        },
         {
           "name": "🎮・ai-game-assets",
           "type": "text",
           "topic": "AI game assets"
         },
       ]
-    },,
+    },
     {
       "id": "developer",
       "name": "💻・DEVELOPER MATRIX",
@@ -262,34 +262,34 @@
           "name": "💻・coding-general",
           "type": "text",
           "topic": "Programming discussions"
-        },,
+        },
         {
           "name": "🐍・python-ai",
           "type": "text",
           "topic": "Python AI development"
-        },,
+        },
         {
           "name": "⚡・javascript-ai",
           "type": "text",
           "topic": "JavaScript AI development"
-        },,
+        },
         {
           "name": "🟦・typescript",
           "type": "text",
           "topic": "TypeScript projects"
-        },,
+        },
         {
           "name": "🔧・developer-tools",
           "type": "text",
           "topic": "AI developer tools"
-        },,
+        },
         {
           "name": "🔗・api-integrations",
           "type": "text",
           "topic": "AI APIs and integrations"
         },
       ]
-    },,
+    },
     {
       "id": "data-science",
       "name": "📊・DATA SCIENCE HUB",
@@ -298,34 +298,34 @@
           "name": "📊・data-general",
           "type": "text",
           "topic": "Data science discussions"
-        },,
+        },
         {
           "name": "📈・data-analysis",
           "type": "text",
           "topic": "Data analysis techniques"
-        },,
+        },
         {
           "name": "🗄️・databases",
           "type": "text",
           "topic": "Database systems"
-        },,
+        },
         {
           "name": "📚・statistics",
           "type": "text",
           "topic": "Statistics and mathematics"
-        },,
+        },
         {
           "name": "📉・visualization",
           "type": "text",
           "topic": "Data visualization"
-        },,
+        },
         {
           "name": "⚡・big-data",
           "type": "text",
           "topic": "Big data technologies"
         },
       ]
-    },,
+    },
     {
       "id": "frameworks",
       "name": "🧩・AI FRAMEWORKS",
@@ -334,34 +334,34 @@
           "name": "🧩・framework-chat",
           "type": "text",
           "topic": "AI frameworks discussion"
-        },,
+        },
         {
           "name": "🔥・pytorch",
           "type": "text",
           "topic": "PyTorch development"
-        },,
+        },
         {
           "name": "📊・tensorflow",
           "type": "text",
           "topic": "TensorFlow projects"
-        },,
+        },
         {
           "name": "🤗・huggingface",
           "type": "text",
           "topic": "Hugging Face models"
-        },,
+        },
         {
           "name": "⛓️・langchain",
           "type": "text",
           "topic": "LangChain development"
-        },,
+        },
         {
           "name": "🧪・ml-libraries",
           "type": "text",
           "topic": "Machine learning libraries"
         },
       ]
-    },,
+    },
     {
       "id": "deployment",
       "name": "🚀・AI DEPLOYMENT",
@@ -370,34 +370,34 @@
           "name": "🚀・deployment-general",
           "type": "text",
           "topic": "AI deployment"
-        },,
+        },
         {
           "name": "🐳・docker",
           "type": "text",
           "topic": "Docker containers"
-        },,
+        },
         {
           "name": "☁️・cloud-ai",
           "type": "text",
           "topic": "Cloud AI services"
-        },,
+        },
         {
           "name": "🔄・mlops",
           "type": "text",
           "topic": "Machine learning operations"
-        },,
+        },
         {
           "name": "📊・monitoring",
           "type": "text",
           "topic": "AI monitoring"
-        },,
+        },
         {
           "name": "⚡・scaling",
           "type": "text",
           "topic": "Scaling AI systems"
         },
       ]
-    },,
+    },
     {
       "id": "robotics",
       "name": "🤖・ROBOTICS LAB",
@@ -406,34 +406,34 @@
           "name": "🤖・robotics-general",
           "type": "text",
           "topic": "Robotics and AI"
-        },,
+        },
         {
           "name": "🦾・robot-hardware",
           "type": "text",
           "topic": "Robot hardware"
-        },,
+        },
         {
           "name": "🚗・autonomous-machines",
           "type": "text",
           "topic": "Autonomous robots"
-        },,
+        },
         {
           "name": "🚁・ai-drones",
           "type": "text",
           "topic": "AI drone systems"
-        },,
+        },
         {
           "name": "🧭・navigation-ai",
           "type": "text",
           "topic": "Robot navigation"
-        },,
+        },
         {
           "name": "🎯・robot-control",
           "type": "text",
           "topic": "Robot control systems"
         },
       ]
-    },,
+    },
     {
       "id": "research",
       "name": "🔬・RESEARCH FRONTIER",
@@ -442,34 +442,34 @@
           "name": "🔬・research-chat",
           "type": "text",
           "topic": "AI research discussions"
-        },,
+        },
         {
           "name": "📄・research-papers",
           "type": "text",
           "topic": "AI papers"
-        },,
+        },
         {
           "name": "🧠・agi-research",
           "type": "text",
           "topic": "Artificial general intelligence"
-        },,
+        },
         {
           "name": "⚛️・quantum-ai",
           "type": "text",
           "topic": "Quantum AI"
-        },,
+        },
         {
           "name": "🧬・bio-ai",
           "type": "text",
           "topic": "AI biology research"
-        },,
+        },
         {
           "name": "🌍・future-research",
           "type": "text",
           "topic": "Future AI research"
         },
       ]
-    },,
+    },
     {
       "id": "business",
       "name": "🏢・AI BUSINESS DISTRICT",
@@ -478,34 +478,34 @@
           "name": "🏢・business-ai",
           "type": "text",
           "topic": "AI business"
-        },,
+        },
         {
           "name": "🚀・startups",
           "type": "text",
           "topic": "AI startups"
-        },,
+        },
         {
           "name": "💰・investment",
           "type": "text",
           "topic": "AI investments"
-        },,
+        },
         {
           "name": "📈・growth-strategy",
           "type": "text",
           "topic": "Business growth"
-        },,
+        },
         {
           "name": "🤝・collaboration",
           "type": "text",
           "topic": "Business collaboration"
-        },,
+        },
         {
           "name": "📊・market-analysis",
           "type": "text",
           "topic": "AI market analysis"
         },
       ]
-    },,
+    },
     {
       "id": "academy",
       "name": "🎓・AI ACADEMY",
@@ -514,34 +514,34 @@
           "name": "🎓・academy-general",
           "type": "text",
           "topic": "AI learning"
-        },,
+        },
         {
           "name": "📚・beginner-ai",
           "type": "text",
           "topic": "AI for beginners"
-        },,
+        },
         {
           "name": "🚀・advanced-ai",
           "type": "text",
           "topic": "Advanced AI topics"
-        },,
+        },
         {
           "name": "📖・learning-resources",
           "type": "text",
           "topic": "AI resources"
-        },,
+        },
         {
           "name": "🧑‍🎓・mentorship",
           "type": "text",
           "topic": "AI mentorship"
-        },,
+        },
         {
           "name": "🏆・certifications",
           "type": "text",
           "topic": "AI certifications"
         },
       ]
-    },,
+    },
     {
       "id": "tools",
       "name": "🛠️・AI TOOL MARKET",
@@ -550,34 +550,34 @@
           "name": "🛠️・tool-showcase",
           "type": "text",
           "topic": "AI tools showcase"
-        },,
+        },
         {
           "name": "⭐・tool-reviews",
           "type": "text",
           "topic": "AI tool reviews"
-        },,
+        },
         {
           "name": "💎・premium-tools",
           "type": "text",
           "topic": "Premium AI tools"
-        },,
+        },
         {
           "name": "🆓・free-tools",
           "type": "text",
           "topic": "Free AI tools"
-        },,
+        },
         {
           "name": "⚙️・automation-tools",
           "type": "text",
           "topic": "AI automation"
-        },,
+        },
         {
           "name": "📋・tool-requests",
           "type": "text",
           "topic": "Request AI tools"
         },
       ]
-    },,
+    },
     {
       "id": "ethics",
       "name": "⚖️・AI ETHICS & SAFETY",
@@ -586,34 +586,34 @@
           "name": "⚖️・ai-ethics",
           "type": "text",
           "topic": "AI ethics discussions"
-        },,
+        },
         {
           "name": "🛡️・ai-safety",
           "type": "text",
           "topic": "AI safety research"
-        },,
+        },
         {
           "name": "🔐・privacy",
           "type": "text",
           "topic": "AI privacy and security"
-        },,
+        },
         {
           "name": "⚠️・risks",
           "type": "text",
           "topic": "AI risks and challenges"
-        },,
+        },
         {
           "name": "🌍・ai-governance",
           "type": "text",
           "topic": "AI governance"
-        },,
+        },
         {
           "name": "📜・regulations",
           "type": "text",
           "topic": "AI laws and regulations"
         },
       ]
-    },,
+    },
     {
       "id": "gaming",
       "name": "🎮・AI GAMING WORLD",
@@ -622,34 +622,34 @@
           "name": "🎮・gaming-ai",
           "type": "text",
           "topic": "AI gaming discussions"
-        },,
+        },
         {
           "name": "🕹️・game-development",
           "type": "text",
           "topic": "AI game development"
-        },,
+        },
         {
           "name": "🤖・ai-npcs",
           "type": "text",
           "topic": "AI powered NPCs"
-        },,
+        },
         {
           "name": "🎨・game-assets",
           "type": "text",
           "topic": "AI game assets"
-        },,
+        },
         {
           "name": "🏆・gaming-events",
           "type": "text",
           "topic": "Gaming events"
-        },,
+        },
         {
           "name": "🌐・metaverse-ai",
           "type": "text",
           "topic": "AI metaverse"
         },
       ]
-    },,
+    },
     {
       "id": "voice",
       "name": "🎙️・VOICE UNIVERSE",
@@ -658,34 +658,34 @@
           "name": "🎙️・global-lounge",
           "type": "voice",
           "topic": "Community voice chat"
-        },,
+        },
         {
           "name": "🤖・ai-discussions",
           "type": "voice",
           "topic": "AI voice meetings"
-        },,
+        },
         {
           "name": "💻・coding-room",
           "type": "voice",
           "topic": "Coding sessions"
-        },,
+        },
         {
           "name": "📚・study-room",
           "type": "voice",
           "topic": "AI study sessions"
-        },,
+        },
         {
           "name": "🎤・presentations",
           "type": "voice",
           "topic": "AI presentations"
-        },,
+        },
         {
           "name": "🎮・gaming-room",
           "type": "voice",
           "topic": "Gaming voice chat"
         },
       ]
-    },,
+    },
     {
       "id": "community",
       "name": "🌍・GLOBAL COMMUNITY",
@@ -694,34 +694,34 @@
           "name": "👋・introductions",
           "type": "text",
           "topic": "Introduce yourself"
-        },,
+        },
         {
           "name": "💬・general-chat",
           "type": "text",
           "topic": "Community conversations"
-        },,
+        },
         {
           "name": "🎉・events",
           "type": "text",
           "topic": "Community events"
-        },,
+        },
         {
           "name": "📸・showcase",
           "type": "text",
           "topic": "Project showcase"
-        },,
+        },
         {
           "name": "🤝・collaboration",
           "type": "text",
           "topic": "Find collaborators"
-        },,
+        },
         {
           "name": "🎁・giveaways",
           "type": "text",
           "topic": "Community giveaways"
         },
       ]
-    },,
+    },
     {
       "id": "creator",
       "name": "📹・AI CREATOR HUB",
@@ -730,34 +730,34 @@
           "name": "📹・creator-general",
           "type": "text",
           "topic": "Creator discussions"
-        },,
+        },
         {
           "name": "🎬・video-creators",
           "type": "text",
           "topic": "AI video creators"
-        },,
+        },
         {
           "name": "🖼️・designers",
           "type": "text",
           "topic": "AI designers"
-        },,
+        },
         {
           "name": "✍️・writers",
           "type": "text",
           "topic": "AI writers"
-        },,
+        },
         {
           "name": "🎵・music-creators",
           "type": "text",
           "topic": "AI music creators"
-        },,
+        },
         {
           "name": "🌟・creator-showcase",
           "type": "text",
           "topic": "Creator projects"
         },
       ]
-    },,
+    },
     {
       "id": "automation",
       "name": "⚙️・AI AUTOMATION",
@@ -766,34 +766,34 @@
           "name": "⚙️・automation-chat",
           "type": "text",
           "topic": "AI automation"
-        },,
+        },
         {
           "name": "🤖・ai-agents",
           "type": "text",
           "topic": "AI agents"
-        },,
+        },
         {
           "name": "🔄・workflow-ai",
           "type": "text",
           "topic": "AI workflows"
-        },,
+        },
         {
           "name": "📱・business-automation",
           "type": "text",
           "topic": "Business automation"
-        },,
+        },
         {
           "name": "🧩・integrations",
           "type": "text",
           "topic": "AI integrations"
-        },,
+        },
         {
           "name": "🚀・automation-projects",
           "type": "text",
           "topic": "Automation projects"
         },
       ]
-    },,
+    },
     {
       "id": "future",
       "name": "🔮・FUTURE TECHNOLOGY",
@@ -802,34 +802,34 @@
           "name": "🔮・future-ai",
           "type": "text",
           "topic": "Future AI ideas"
-        },,
+        },
         {
           "name": "🌌・agi",
           "type": "text",
           "topic": "Artificial general intelligence"
-        },,
+        },
         {
           "name": "🧠・brain-computer",
           "type": "text",
           "topic": "Brain computer interfaces"
-        },,
+        },
         {
           "name": "🚀・space-ai",
           "type": "text",
           "topic": "AI in space"
-        },,
+        },
         {
           "name": "⚛️・quantum-tech",
           "type": "text",
           "topic": "Quantum technology"
-        },,
+        },
         {
           "name": "🌱・future-projects",
           "type": "text",
           "topic": "Future projects"
         },
       ]
-    },,
+    },
     {
       "id": "support",
       "name": "🆘・AI SUPPORT CENTER",
@@ -838,34 +838,34 @@
           "name": "🆘・support",
           "type": "text",
           "topic": "Community support"
-        },,
+        },
         {
           "name": "❓・questions",
           "type": "text",
           "topic": "Ask questions"
-        },,
+        },
         {
           "name": "🐞・bug-reports",
           "type": "text",
           "topic": "Report problems"
-        },,
+        },
         {
           "name": "💡・feature-requests",
           "type": "text",
           "topic": "Request features"
-        },,
+        },
         {
           "name": "📩・contact-team",
           "type": "text",
           "topic": "Contact staff"
-        },,
+        },
         {
           "name": "🎫・tickets",
           "type": "text",
           "topic": "Support tickets"
         },
       ]
-    },,
+    },
     {
       "id": "events",
       "name": "🏆・AI EVENTS",
@@ -874,34 +874,34 @@
           "name": "🏆・competitions",
           "type": "text",
           "topic": "AI competitions"
-        },,
+        },
         {
           "name": "🎤・webinars",
           "type": "text",
           "topic": "AI webinars"
-        },,
+        },
         {
           "name": "📅・event-calendar",
           "type": "text",
           "topic": "Upcoming events"
-        },,
+        },
         {
           "name": "🎓・workshops",
           "type": "text",
           "topic": "AI workshops"
-        },,
+        },
         {
           "name": "🥇・leaderboards",
           "type": "text",
           "topic": "Community rankings"
-        },,
+        },
         {
           "name": "🎥・event-recordings",
           "type": "text",
           "topic": "Recorded events"
         },
       ]
-    },,
+    },
     {
       "id": "cloud",
       "name": "☁️・AI CLOUD SYSTEMS",
@@ -910,34 +910,34 @@
           "name": "☁️・cloud-ai",
           "type": "text",
           "topic": "Cloud AI platforms"
-        },,
+        },
         {
           "name": "🖥️・servers",
           "type": "text",
           "topic": "AI servers"
-        },,
+        },
         {
           "name": "🔧・cloud-tools",
           "type": "text",
           "topic": "Cloud development tools"
-        },,
+        },
         {
           "name": "🚀・deployment-help",
           "type": "text",
           "topic": "Deployment assistance"
-        },,
+        },
         {
           "name": "📊・cloud-monitoring",
           "type": "text",
           "topic": "Cloud monitoring"
-        },,
+        },
         {
           "name": "🔐・cloud-security",
           "type": "text",
           "topic": "Cloud security"
         },
       ]
-    },,
+    },
     {
       "id": "security",
       "name": "🔐・AI SECURITY LAB",
@@ -946,34 +946,34 @@
           "name": "🔐・security-general",
           "type": "text",
           "topic": "AI security discussions"
-        },,
+        },
         {
           "name": "🛡️・cyber-ai",
           "type": "text",
           "topic": "Cybersecurity AI"
-        },,
+        },
         {
           "name": "⚔️・threat-analysis",
           "type": "text",
           "topic": "Threat analysis"
-        },,
+        },
         {
           "name": "🔎・vulnerability-research",
           "type": "text",
           "topic": "Security research"
-        },,
+        },
         {
           "name": "🧪・security-testing",
           "type": "text",
           "topic": "Security testing"
-        },,
+        },
         {
           "name": "🚨・incident-response",
           "type": "text",
           "topic": "Security incidents"
         },
       ]
-    },,
+    },
     {
       "id": "mobile",
       "name": "📱・AI MOBILE DEVELOPMENT",
@@ -982,34 +982,34 @@
           "name": "📱・mobile-ai",
           "type": "text",
           "topic": "Mobile AI applications"
-        },,
+        },
         {
           "name": "🤖・android-ai",
           "type": "text",
           "topic": "Android AI development"
-        },,
+        },
         {
           "name": "🍎・ios-ai",
           "type": "text",
           "topic": "iOS AI development"
-        },,
+        },
         {
           "name": "⚡・mobile-ml",
           "type": "text",
           "topic": "Mobile machine learning"
-        },,
+        },
         {
           "name": "📦・app-showcase",
           "type": "text",
           "topic": "AI app showcase"
-        },,
+        },
         {
           "name": "🛠️・app-tools",
           "type": "text",
           "topic": "Mobile AI tools"
         },
       ]
-    },,
+    },
     {
       "id": "web-ai",
       "name": "🌐・AI WEB DEVELOPMENT",
@@ -1018,34 +1018,34 @@
           "name": "🌐・web-ai",
           "type": "text",
           "topic": "AI websites"
-        },,
+        },
         {
           "name": "⚛️・react-ai",
           "type": "text",
           "topic": "React AI projects"
-        },,
+        },
         {
           "name": "▲・nextjs-ai",
           "type": "text",
           "topic": "Next.js AI apps"
-        },,
+        },
         {
           "name": "🎨・ui-ai",
           "type": "text",
           "topic": "AI user interfaces"
-        },,
+        },
         {
           "name": "🔗・web-integrations",
           "type": "text",
           "topic": "Web AI integrations"
-        },,
+        },
         {
           "name": "🚀・web-projects",
           "type": "text",
           "topic": "AI web projects"
         },
       ]
-    },,
+    },
     {
       "id": "database",
       "name": "🗄️・AI DATABASES",
@@ -1054,34 +1054,34 @@
           "name": "🗄️・database-general",
           "type": "text",
           "topic": "AI databases"
-        },,
+        },
         {
           "name": "🐘・postgresql",
           "type": "text",
           "topic": "PostgreSQL discussions"
-        },,
+        },
         {
           "name": "🍃・mongodb",
           "type": "text",
           "topic": "MongoDB AI projects"
-        },,
+        },
         {
           "name": "⚡・redis",
           "type": "text",
           "topic": "Redis systems"
-        },,
+        },
         {
           "name": "📊・vector-databases",
           "type": "text",
           "topic": "Vector databases"
-        },,
+        },
         {
           "name": "🔍・data-search",
           "type": "text",
           "topic": "AI search systems"
         },
       ]
-    },,
+    },
     {
       "id": "automation-advanced",
       "name": "⚙️・ADVANCED AUTOMATION",
@@ -1090,34 +1090,34 @@
           "name": "⚙️・automation-lab",
           "type": "text",
           "topic": "Advanced AI automation"
-        },,
+        },
         {
           "name": "🤖・agent-builders",
           "type": "text",
           "topic": "Building AI agents"
-        },,
+        },
         {
           "name": "🔄・workflow-design",
           "type": "text",
           "topic": "AI workflow design"
-        },,
+        },
         {
           "name": "🧩・no-code-ai",
           "type": "text",
           "topic": "No-code AI solutions"
-        },,
+        },
         {
           "name": "🚀・automation-projects",
           "type": "text",
           "topic": "Automation projects showcase"
-        },,
+        },
         {
           "name": "📚・automation-resources",
           "type": "text",
           "topic": "Automation learning resources"
         },
       ]
-    },,
+    },
     {
       "id": "finance",
       "name": "💰・AI FINANCE",
@@ -1126,34 +1126,34 @@
           "name": "💰・finance-ai",
           "type": "text",
           "topic": "AI in finance"
-        },,
+        },
         {
           "name": "📈・trading-ai",
           "type": "text",
           "topic": "AI trading systems"
-        },,
+        },
         {
           "name": "🏦・banking-ai",
           "type": "text",
           "topic": "AI banking solutions"
-        },,
+        },
         {
           "name": "📊・financial-models",
           "type": "text",
           "topic": "Financial AI models"
-        },,
+        },
         {
           "name": "🔮・market-prediction",
           "type": "text",
           "topic": "AI market prediction"
-        },,
+        },
         {
           "name": "🧮・quant-ai",
           "type": "text",
           "topic": "Quantitative AI"
         },
       ]
-    },,
+    },
     {
       "id": "healthcare",
       "name": "🏥・AI HEALTHCARE",
@@ -1162,34 +1162,34 @@
           "name": "🏥・health-ai",
           "type": "text",
           "topic": "AI healthcare"
-        },,
+        },
         {
           "name": "🧬・medical-ai",
           "type": "text",
           "topic": "Medical AI research"
-        },,
+        },
         {
           "name": "🔬・diagnosis-ai",
           "type": "text",
           "topic": "AI diagnosis systems"
-        },,
+        },
         {
           "name": "💊・pharma-ai",
           "type": "text",
           "topic": "AI pharmaceutical research"
-        },,
+        },
         {
           "name": "🧠・neuro-ai",
           "type": "text",
           "topic": "AI neuroscience"
-        },,
+        },
         {
           "name": "📋・health-projects",
           "type": "text",
           "topic": "Healthcare AI projects"
         },
       ]
-    },,
+    },
     {
       "id": "education",
       "name": "📚・AI EDUCATION",
@@ -1198,34 +1198,34 @@
           "name": "📚・education-ai",
           "type": "text",
           "topic": "AI education"
-        },,
+        },
         {
           "name": "🎓・student-zone",
           "type": "text",
           "topic": "Student discussions"
-        },,
+        },
         {
           "name": "👨‍🏫・teacher-zone",
           "type": "text",
           "topic": "AI teaching"
-        },,
+        },
         {
           "name": "📝・study-materials",
           "type": "text",
           "topic": "Study resources"
-        },,
+        },
         {
           "name": "🏆・learning-challenges",
           "type": "text",
           "topic": "Learning challenges"
-        },,
+        },
         {
           "name": "🌟・student-projects",
           "type": "text",
           "topic": "Student AI projects"
         },
       ]
-    },,
+    },
     {
       "id": "opensource",
       "name": "🌐・OPEN SOURCE AI",
@@ -1234,34 +1234,34 @@
           "name": "🌐・opensource-general",
           "type": "text",
           "topic": "Open source AI"
-        },,
+        },
         {
           "name": "💻・github-projects",
           "type": "text",
           "topic": "AI GitHub projects"
-        },,
+        },
         {
           "name": "🛠️・contributions",
           "type": "text",
           "topic": "Open source contributions"
-        },,
+        },
         {
           "name": "📦・repositories",
           "type": "text",
           "topic": "AI repositories"
-        },,
+        },
         {
           "name": "🔧・developer-tools",
           "type": "text",
           "topic": "Open source tools"
-        },,
+        },
         {
           "name": "⭐・featured-projects",
           "type": "text",
           "topic": "Featured projects"
         },
       ]
-    },,
+    },
     {
       "id": "hardware",
       "name": "🖥️・AI HARDWARE",
@@ -1270,34 +1270,34 @@
           "name": "🖥️・hardware-ai",
           "type": "text",
           "topic": "AI hardware"
-        },,
+        },
         {
           "name": "⚡・gpu-discussion",
           "type": "text",
           "topic": "GPU technology"
-        },,
+        },
         {
           "name": "🔋・edge-ai",
           "type": "text",
           "topic": "Edge AI devices"
-        },,
+        },
         {
           "name": "🤖・robot-hardware",
           "type": "text",
           "topic": "Robotics hardware"
-        },,
+        },
         {
           "name": "📱・ai-devices",
           "type": "text",
           "topic": "AI devices"
-        },,
+        },
         {
           "name": "🧪・hardware-testing",
           "type": "text",
           "topic": "Hardware testing"
         },
       ]
-    },,
+    },
     {
       "id": "media",
       "name": "🎥・AI MEDIA CENTER",
@@ -1306,34 +1306,34 @@
           "name": "🎥・media-ai",
           "type": "text",
           "topic": "AI media"
-        },,
+        },
         {
           "name": "📺・video-ai",
           "type": "text",
           "topic": "AI video media"
-        },,
+        },
         {
           "name": "🎙️・podcasts",
           "type": "text",
           "topic": "AI podcasts"
-        },,
+        },
         {
           "name": "📰・articles",
           "type": "text",
           "topic": "AI articles"
-        },,
+        },
         {
           "name": "📸・media-showcase",
           "type": "text",
           "topic": "Media showcase"
-        },,
+        },
         {
           "name": "⭐・featured-media",
           "type": "text",
           "topic": "Featured AI media"
         },
       ]
-    },,
+    },
     {
       "id": "international",
       "name": "🌍・AI INTERNATIONAL",
@@ -1342,34 +1342,34 @@
           "name": "🌍・global-ai",
           "type": "text",
           "topic": "Global AI discussions"
-        },,
+        },
         {
           "name": "🇺🇸・english-ai",
           "type": "text",
           "topic": "English community"
-        },,
+        },
         {
           "name": "🇫🇷・french-ai",
           "type": "text",
           "topic": "French community"
-        },,
+        },
         {
           "name": "🇪🇸・spanish-ai",
           "type": "text",
           "topic": "Spanish community"
-        },,
+        },
         {
           "name": "🌐・translations",
           "type": "text",
           "topic": "AI translations"
-        },,
+        },
         {
           "name": "🤝・international-events",
           "type": "text",
           "topic": "International events"
         },
       ]
-    },,
+    },
     {
       "id": "category_34",
       "name": "🌍・AI GLOBAL NETWORK",
@@ -1378,34 +1378,34 @@
           "name": "🌐・global-ai",
           "type": "text",
           "description": "Global AI discussions and communities."
-        },,
+        },
         {
           "name": "🗣️・language-ai",
           "type": "text",
           "description": "AI translation and language technology."
-        },,
+        },
         {
           "name": "🤝・international",
           "type": "text",
           "description": "International AI collaboration."
-        },,
+        },
         {
           "name": "📢・global-events",
           "type": "text",
           "description": "Worldwide AI events."
-        },,
+        },
         {
           "name": "🌎・regional-hubs",
           "type": "text",
           "description": "Regional AI communities."
-        },,
+        },
         {
           "name": "💬・global-chat",
           "type": "text",
           "description": "Global community discussions."
         },
       ]
-    },,
+    },
     {
       "id": "category_35",
       "name": "🧠・AI AGENT SYSTEMS",
@@ -1414,34 +1414,34 @@
           "name": "🤖・ai-agents",
           "type": "text",
           "description": "AI agent development."
-        },,
+        },
         {
           "name": "⚙️・automation",
           "type": "text",
           "description": "AI automation workflows."
-        },,
+        },
         {
           "name": "🔗・agent-frameworks",
           "type": "text",
           "description": "Agent frameworks and tools."
-        },,
+        },
         {
           "name": "🧩・multi-agent",
           "type": "text",
           "description": "Multi agent systems."
-        },,
+        },
         {
           "name": "🚀・agent-projects",
           "type": "text",
           "description": "AI agent projects."
-        },,
+        },
         {
           "name": "📚・agent-learning",
           "type": "text",
           "description": "Learn AI agents."
         },
       ]
-    },,
+    },
     {
       "id": "category_36",
       "name": "🔐・AI SECURITY LAB",
@@ -1450,34 +1450,34 @@
           "name": "🔐・ai-security",
           "type": "text",
           "description": "Security in artificial intelligence."
-        },,
+        },
         {
           "name": "🛡️・model-security",
           "type": "text",
           "description": "Protecting AI models."
-        },,
+        },
         {
           "name": "⚔️・adversarial-ai",
           "type": "text",
           "description": "Adversarial attacks and defense."
-        },,
+        },
         {
           "name": "🔎・security-research",
           "type": "text",
           "description": "AI security research."
-        },,
+        },
         {
           "name": "🚨・threat-monitoring",
           "type": "text",
           "description": "AI threat monitoring."
-        },,
+        },
         {
           "name": "📋・security-guides",
           "type": "text",
           "description": "Security resources."
         },
       ]
-    },,
+    },
     {
       "id": "category_37",
       "name": "☁️・AI CLOUD COMPUTING",
@@ -1486,34 +1486,34 @@
           "name": "☁️・cloud-ai",
           "type": "text",
           "description": "Cloud AI platforms."
-        },,
+        },
         {
           "name": "🟦・aws-ai",
           "type": "text",
           "description": "AWS AI services."
-        },,
+        },
         {
           "name": "🔵・azure-ai",
           "type": "text",
           "description": "Microsoft Azure AI."
-        },,
+        },
         {
           "name": "🌈・google-cloud-ai",
           "type": "text",
           "description": "Google Cloud AI."
-        },,
+        },
         {
           "name": "⚡・serverless-ai",
           "type": "text",
           "description": "Serverless AI solutions."
-        },,
+        },
         {
           "name": "📊・cloud-optimization",
           "type": "text",
           "description": "Cloud performance optimization."
         },
       ]
-    },,
+    },
     {
       "id": "category_38",
       "name": "🧬・AI BIOLOGY",
@@ -1522,34 +1522,34 @@
           "name": "🧬・bio-ai",
           "type": "text",
           "description": "AI in biology."
-        },,
+        },
         {
           "name": "🧪・drug-discovery",
           "type": "text",
           "description": "AI drug discovery."
-        },,
+        },
         {
           "name": "🔬・medical-models",
           "type": "text",
           "description": "Medical AI models."
-        },,
+        },
         {
           "name": "🧫・genomics",
           "type": "text",
           "description": "AI genomics research."
-        },,
+        },
         {
           "name": "🏥・health-ai",
           "type": "text",
           "description": "Healthcare AI."
-        },,
+        },
         {
           "name": "📚・bio-resources",
           "type": "text",
           "description": "Biology AI resources."
         },
       ]
-    },,
+    },
     {
       "id": "category_39",
       "name": "⚛️・QUANTUM AI",
@@ -1558,34 +1558,34 @@
           "name": "⚛️・quantum-ai",
           "type": "text",
           "description": "Quantum artificial intelligence."
-        },,
+        },
         {
           "name": "🔬・quantum-research",
           "type": "text",
           "description": "Quantum research."
-        },,
+        },
         {
           "name": "🧮・quantum-algorithms",
           "type": "text",
           "description": "Quantum algorithms."
-        },,
+        },
         {
           "name": "💻・quantum-code",
           "type": "text",
           "description": "Quantum programming."
-        },,
+        },
         {
           "name": "🚀・future-computing",
           "type": "text",
           "description": "Future computing technologies."
-        },,
+        },
         {
           "name": "📖・quantum-learning",
           "type": "text",
           "description": "Quantum AI learning."
         },
       ]
-    },,
+    },
     {
       "id": "category_40",
       "name": "🌱・AI SUSTAINABILITY",
@@ -1594,34 +1594,34 @@
           "name": "🌱・green-ai",
           "type": "text",
           "description": "Sustainable artificial intelligence."
-        },,
+        },
         {
           "name": "🌍・climate-ai",
           "type": "text",
           "description": "AI for climate solutions."
-        },,
+        },
         {
           "name": "⚡・energy-ai",
           "type": "text",
           "description": "AI energy optimization."
-        },,
+        },
         {
           "name": "♻️・eco-projects",
           "type": "text",
           "description": "Environmental AI projects."
-        },,
+        },
         {
           "name": "📊・sustainability-data",
           "type": "text",
           "description": "Environmental data analysis."
-        },,
+        },
         {
           "name": "🌎・future-earth",
           "type": "text",
           "description": "AI solutions for Earth."
         },
       ]
-    },,
+    },
     {
       "id": "category_41",
       "name": "🏭・AI INDUSTRY HUB",
@@ -1630,34 +1630,34 @@
           "name": "🏭・industrial-ai",
           "type": "text",
           "description": "AI in industries."
-        },,
+        },
         {
           "name": "🚗・automotive-ai",
           "type": "text",
           "description": "AI vehicles and transport."
-        },,
+        },
         {
           "name": "🏢・enterprise-ai",
           "type": "text",
           "description": "Enterprise AI solutions."
-        },,
+        },
         {
           "name": "🏗️・construction-ai",
           "type": "text",
           "description": "AI in construction."
-        },,
+        },
         {
           "name": "🛒・retail-ai",
           "type": "text",
           "description": "AI in retail."
-        },,
+        },
         {
           "name": "📈・industry-growth",
           "type": "text",
           "description": "Industry trends."
         },
       ]
-    },,
+    },
     {
       "id": "category_42",
       "name": "🎮・AI GAME DEVELOPMENT",
@@ -1666,34 +1666,34 @@
           "name": "🎮・ai-game-dev",
           "type": "text",
           "description": "AI powered game development."
-        },,
+        },
         {
           "name": "🤖・smart-npcs",
           "type": "text",
           "description": "AI NPC systems."
-        },,
+        },
         {
           "name": "🕹️・game-ai-tools",
           "type": "text",
           "description": "AI tools for games."
-        },,
+        },
         {
           "name": "🎨・game-assets-ai",
           "type": "text",
           "description": "AI generated game assets."
-        },,
+        },
         {
           "name": "📖・game-story-ai",
           "type": "text",
           "description": "AI storytelling."
-        },,
+        },
         {
           "name": "🏆・game-projects",
           "type": "text",
           "description": "AI game projects."
         },
       ]
-    },,
+    },
     {
       "id": "category_43",
       "name": "📱・AI MOBILE DEVELOPMENT",
@@ -1702,34 +1702,34 @@
           "name": "📱・mobile-ai",
           "type": "text",
           "description": "AI mobile applications."
-        },,
+        },
         {
           "name": "🤖・android-ai",
           "type": "text",
           "description": "Android AI development."
-        },,
+        },
         {
           "name": "🍎・ios-ai",
           "type": "text",
           "description": "iOS AI development."
-        },,
+        },
         {
           "name": "⚡・mobile-ml",
           "type": "text",
           "description": "Machine learning on mobile."
-        },,
+        },
         {
           "name": "📦・app-showcase",
           "type": "text",
           "description": "AI app showcase."
-        },,
+        },
         {
           "name": "🔧・mobile-tools",
           "type": "text",
           "description": "Mobile AI tools."
         },
       ]
-    },,
+    },
     {
       "id": "category_44",
       "name": "🎥・AI MEDIA STUDIO",
@@ -1738,34 +1738,34 @@
           "name": "🎥・media-ai",
           "type": "text",
           "description": "AI media creation."
-        },,
+        },
         {
           "name": "🎬・film-ai",
           "type": "text",
           "description": "AI filmmaking."
-        },,
+        },
         {
           "name": "📸・photo-ai",
           "type": "text",
           "description": "AI photography."
-        },,
+        },
         {
           "name": "🎙️・podcast-ai",
           "type": "text",
           "description": "AI podcasts."
-        },,
+        },
         {
           "name": "📺・creator-tools",
           "type": "text",
           "description": "AI creator tools."
-        },,
+        },
         {
           "name": "⭐・media-showcase",
           "type": "text",
           "description": "Media projects showcase."
         },
       ]
-    },,
+    },
     {
       "id": "category_45",
       "name": "🧪・AI EXPERIMENT ZONE",
@@ -1774,34 +1774,34 @@
           "name": "🧪・experiments-lab",
           "type": "text",
           "description": "Experimental AI projects."
-        },,
+        },
         {
           "name": "🔬・prototype-testing",
           "type": "text",
           "description": "Testing new AI prototypes."
-        },,
+        },
         {
           "name": "💡・research-ideas",
           "type": "text",
           "description": "New AI research ideas."
-        },,
+        },
         {
           "name": "📊・experiment-results",
           "type": "text",
           "description": "Share AI experiment results."
-        },,
+        },
         {
           "name": "🚀・beta-projects",
           "type": "text",
           "description": "Early AI projects."
-        },,
+        },
         {
           "name": "📝・lab-notes",
           "type": "text",
           "description": "AI laboratory notes."
         },
       ]
-    },,
+    },
     {
       "id": "category_46",
       "name": "💼・AI CAREERS",
@@ -1810,34 +1810,34 @@
           "name": "💼・ai-jobs",
           "type": "text",
           "description": "AI job opportunities."
-        },,
+        },
         {
           "name": "📄・resume-help",
           "type": "text",
           "description": "AI career resume help."
-        },,
+        },
         {
           "name": "🎯・interview-prep",
           "type": "text",
           "description": "AI interview preparation."
-        },,
+        },
         {
           "name": "🏢・companies",
           "type": "text",
           "description": "AI companies and careers."
-        },,
+        },
         {
           "name": "🤝・networking",
           "type": "text",
           "description": "Professional AI networking."
-        },,
+        },
         {
           "name": "⭐・career-growth",
           "type": "text",
           "description": "Grow your AI career."
         },
       ]
-    },,
+    },
     {
       "id": "category_47",
       "name": "🏆・AI COMPETITIONS",
@@ -1846,34 +1846,34 @@
           "name": "🏆・competitions",
           "type": "text",
           "description": "AI competitions and events."
-        },,
+        },
         {
           "name": "🥇・leaderboards",
           "type": "text",
           "description": "Competition rankings."
-        },,
+        },
         {
           "name": "🎯・challenges",
           "type": "text",
           "description": "AI challenges."
-        },,
+        },
         {
           "name": "👥・team-building",
           "type": "text",
           "description": "Create AI teams."
-        },,
+        },
         {
           "name": "📅・competition-news",
           "type": "text",
           "description": "Competition announcements."
-        },,
+        },
         {
           "name": "🎁・rewards",
           "type": "text",
           "description": "Competition rewards."
         },
       ]
-    },,
+    },
     {
       "id": "category_48",
       "name": "📰・AI NEWS CENTER",
@@ -1882,34 +1882,34 @@
           "name": "📰・daily-ai-news",
           "type": "text",
           "description": "Daily AI updates."
-        },,
+        },
         {
           "name": "🔥・breaking-ai",
           "type": "text",
           "description": "Breaking AI news."
-        },,
+        },
         {
           "name": "📢・company-updates",
           "type": "text",
           "description": "AI company announcements."
-        },,
+        },
         {
           "name": "🔎・research-news",
           "type": "text",
           "description": "Latest AI research."
-        },,
+        },
         {
           "name": "📈・market-news",
           "type": "text",
           "description": "AI market updates."
-        },,
+        },
         {
           "name": "💬・news-discussion",
           "type": "text",
           "description": "Discuss AI news."
         },
       ]
-    },,
+    },
     {
       "id": "category_49",
       "name": "🌟・AI COMMUNITY SHOWCASE",
@@ -1918,34 +1918,34 @@
           "name": "🌟・project-showcase",
           "type": "text",
           "description": "Showcase amazing AI projects."
-        },,
+        },
         {
           "name": "🎨・creative-showcase",
           "type": "text",
           "description": "Share AI creations."
-        },,
+        },
         {
           "name": "💻・developer-showcase",
           "type": "text",
           "description": "Developer projects and demos."
-        },,
+        },
         {
           "name": "🏅・member-achievements",
           "type": "text",
           "description": "Community achievements."
-        },,
+        },
         {
           "name": "📸・ai-gallery",
           "type": "text",
           "description": "AI images and designs."
-        },,
+        },
         {
           "name": "🚀・success-stories",
           "type": "text",
           "description": "AI success stories."
         },
       ]
-    },,
+    },
     {
       "id": "category_50",
       "name": "🌌・AI UNIVERSE ARCHIVE",
@@ -1954,34 +1954,34 @@
           "name": "📚・knowledge-archive",
           "type": "text",
           "description": "Saved AI knowledge."
-        },,
+        },
         {
           "name": "🗂️・resource-library",
           "type": "text",
           "description": "AI resources library."
-        },,
+        },
         {
           "name": "📖・documentation",
           "type": "text",
           "description": "AI documentation."
-        },,
+        },
         {
           "name": "🕰️・history-of-ai",
           "type": "text",
           "description": "History of artificial intelligence."
-        },,
+        },
         {
           "name": "🔮・future-archive",
           "type": "text",
           "description": "Future AI predictions."
-        },,
+        },
         {
           "name": "⭐・best-of-ai",
           "type": "text",
           "description": "Best AI discoveries."
         },
       ]
-    },,
+    },
     {
       "id": "voice_universe",
       "name": "🎙️・VOICE UNIVERSE",
@@ -1991,34 +1991,34 @@
           "name": "🌎・global-lounge",
           "type": "voice",
           "description": "Open community voice room."
-        },,
+        },
         {
           "name": "🤖・ai-discussions",
           "type": "voice",
           "description": "Talk about AI topics."
-        },,
+        },
         {
           "name": "💻・coding-room",
           "type": "voice",
           "description": "Coding and development sessions."
-        },,
+        },
         {
           "name": "🎓・study-room",
           "type": "voice",
           "description": "AI learning sessions."
-        },,
+        },
         {
           "name": "🎤・events-stage",
           "type": "voice",
           "description": "Community events and presentations."
-        },,
+        },
         {
           "name": "🎮・gaming-ai",
           "type": "voice",
           "description": "Gaming and AI discussions."
         },
       ]
-    },,
+    },
     {
       "id": "staff_command",
       "name": "👑・STAFF COMMAND CENTER",
@@ -2031,7 +2031,7 @@
             "view_channel": ["Staff"],
             "send_messages": ["Staff"]
           },
-        },,
+        },
         {
           "name": "💬・staff-chat",
           "type": "text",
@@ -2039,7 +2039,7 @@
             "view_channel": ["Staff"],
             "send_messages": ["Staff"]
           },
-        },,
+        },
         {
           "name": "🛡️・moderation-logs",
           "type": "text",
@@ -2047,7 +2047,7 @@
             "view_channel": ["Moderator", "Administrator"],
             "send_messages": ["Administrator"]
           },
-        },,
+        },
         {
           "name": "📊・server-reports",
           "type": "text",
@@ -2055,7 +2055,7 @@
             "view_channel": ["Administrator"],
             "send_messages": ["Administrator"]
           },
-        },,
+        },
         {
           "name": "🔐・admin-room",
           "type": "text",
@@ -2063,7 +2063,7 @@
             "view_channel": ["Administrator"],
             "send_messages": ["Administrator"]
           },
-        },,
+        },
         {
           "name": "🚨・security-alerts",
           "type": "text",
@@ -2073,7 +2073,7 @@
           },
         },
       ]
-    },,
+    },
     {
       "id": "developer_private",
       "name": "💻・DEVELOPER HQ",
@@ -2082,29 +2082,29 @@
         {
           "name": "🧩・bot-development",
           "type": "text"
-        },,
+        },
         {
           "name": "⚙️・system-tools",
           "type": "text"
-        },,
+        },
         {
           "name": "🐞・bug-reports",
           "type": "text"
-        },,
+        },
         {
           "name": "🚀・deployments",
           "type": "text"
-        },,
+        },
         {
           "name": "📦・project-files",
           "type": "text"
-        },,
+        },
         {
           "name": "🔧・developer-voice",
           "type": "voice"
         },
       ]
-    },,
+    },
     {
       "id": "partner_center",
       "name": "🤝・PARTNERSHIP CENTER",
@@ -2117,7 +2117,7 @@
             "view_channel": ["Partner", "Administrator"],
             "send_messages": ["Partner", "Administrator"]
           },
-        },,
+        },
         {
           "name": "📢・partner-news",
           "type": "text",
@@ -2125,7 +2125,7 @@
             "view_channel": ["Partner", "Administrator"],
             "send_messages": ["Administrator"]
           },
-        },,
+        },
         {
           "name": "📋・partner-applications",
           "type": "text",
@@ -2133,7 +2133,7 @@
             "view_channel": ["Administrator"],
             "send_messages": ["Administrator"]
           },
-        },,
+        },
         {
           "name": "🌐・partner-showcase",
           "type": "text",
@@ -2141,14 +2141,14 @@
             "view_channel": ["Partner", "Administrator"],
             "send_messages": ["Partner"]
           },
-        },,
+        },
         {
           "name": "🎙️・partner-meeting",
           "type": "voice",
           "permissions": {
             "view_channel": ["Partner", "Administrator"]
           },
-        },,
+        },
         {
           "name": "📈・partner-growth",
           "type": "text",
@@ -2158,7 +2158,7 @@
           },
         },
       ]
-    },,
+    },
     {
       "id": "verification",
       "name": "✅・VERIFICATION CENTER",
@@ -2168,34 +2168,34 @@
           "name": "✅・verify-here",
           "type": "text",
           "description": "Verify your Discord account."
-        },,
+        },
         {
           "name": "🤖・verification-bot",
           "type": "text",
           "description": "Automatic verification system."
-        },,
+        },
         {
           "name": "📜・verification-info",
           "type": "text",
           "description": "Verification instructions."
-        },,
+        },
         {
           "name": "🛡️・security-check",
           "type": "text",
           "description": "Security verification."
-        },,
+        },
         {
           "name": "❓・verification-help",
           "type": "text",
           "description": "Help with verification."
-        },,
+        },
         {
           "name": "🎫・support-tickets",
           "type": "text",
           "description": "Open verification support tickets."
         },
       ]
-    },,
+    },
     {
       "id": "bot_center",
       "name": "🤖・BOT SYSTEM CENTER",
@@ -2208,7 +2208,7 @@
             "view_channel": ["Verified Member"],
             "send_messages": ["Verified Member"]
           },
-        },,
+        },
         {
           "name": "📊・bot-logs",
           "type": "text",
@@ -2216,7 +2216,7 @@
             "view_channel": ["Administrator"],
             "send_messages": ["Administrator"]
           },
-        },,
+        },
         {
           "name": "⚙️・bot-settings",
           "type": "text",
@@ -2224,7 +2224,7 @@
             "view_channel": ["Administrator"],
             "send_messages": ["Administrator"]
           },
-        },,
+        },
         {
           "name": "🧪・bot-testing",
           "type": "text",
@@ -2232,14 +2232,14 @@
             "view_channel": ["Developer"],
             "send_messages": ["Developer"]
           },
-        },,
+        },
         {
           "name": "📡・bot-status",
           "type": "text",
           "permissions": {
             "view_channel": ["Administrator"]
           },
-        },,
+        },
         {
           "name": "🔧・bot-dev-voice",
           "type": "voice",
@@ -2248,7 +2248,7 @@
           },
         },
       ]
-    },,
+    },
   "roles": {
     "hierarchy": [
       {
@@ -2259,7 +2259,7 @@
           "administrator"
         ],
         "hoist": true
-      },,
+      },
       {
         "name": "🌌・AI Architect",
         "color": "#9D4EDD",
@@ -2272,7 +2272,7 @@
           "view_audit_log"
         ],
         "hoist": true
-      },,
+      },
       {
         "name": "💎・Executive Team",
         "color": "#FF006E",
@@ -2284,7 +2284,7 @@
           "ban_members"
         ],
         "hoist": true
-      },,
+      },
       {
         "name": "⚡・Administrator",
         "color": "#00BBF9",
@@ -2297,7 +2297,7 @@
           "view_audit_log"
         ],
         "hoist": true
-      },,
+      },
       {
         "name": "🛡️・Guardian Moderator",
         "color": "#FF006E",
@@ -2309,7 +2309,7 @@
           "manage_messages"
         ],
         "hoist": true
-      },,
+      },
       {
         "name": "🔰・Helper",
         "color": "#3A86FF",
@@ -2320,7 +2320,7 @@
           "move_members"
         ],
         "hoist": false
-      },,
+      },
       {
         "name": "🤖・AI Expert",
         "color": "#06FFA5",
@@ -2332,7 +2332,7 @@
           "use_external_emojis"
         ],
         "hoist": false
-      },,
+      },
       {
         "name": "💻・Developer",
         "color": "#00BBF9",
@@ -2343,7 +2343,7 @@
           "manage_threads"
         ],
         "hoist": false
-      },,
+      },
       {
         "name": "🎨・AI Creator",
         "color": "#FB5607",
@@ -2354,7 +2354,7 @@
           "embed_links"
         ],
         "hoist": false
-      },,
+      },
       {
         "name": "🎓・AI Student",
         "color": "#8338EC",
@@ -2366,7 +2366,7 @@
           "add_reactions"
         ],
         "hoist": false
-      },,
+      },
       {
         "name": "⭐・Verified Member",
         "color": "#FFBE0B",
@@ -2380,7 +2380,7 @@
           "speak"
         ],
         "hoist": false
-      },,
+      },
       {
         "name": "🌱・New Explorer",
         "color": "#06FFA5",
@@ -2392,7 +2392,7 @@
           "add_reactions"
         ],
         "hoist": false
-      },,
+      },
       {
         "name": "🔊・Content Creator",
         "color": "#FF006E",
@@ -2405,7 +2405,7 @@
           "stream"
         ],
         "hoist": false
-      },,
+      },
       {
         "name": "🚀・Innovation Lead",
         "color": "#00BBF9",
@@ -2416,7 +2416,7 @@
           "create_public_threads"
         ],
         "hoist": false
-      },,
+      },
       {
         "name": "🏆・Achievement Hunter",
         "color": "#FFBE0B",
@@ -2427,7 +2427,7 @@
           "add_reactions"
         ],
         "hoist": false
-      },,
+      },
       {
         "name": "💬・Communicator",
         "color": "#3A86FF",
@@ -2438,7 +2438,7 @@
           "use_external_emojis"
         ],
         "hoist": false
-      },,
+      },
       {
         "name": "📚・Scholar",
         "color": "#8338EC",
@@ -2449,7 +2449,7 @@
           "attach_files"
         ],
         "hoist": false
-      },,
+      },
       {
         "name": "🌟・Researcher",
         "color": "#06FFA5",
@@ -2461,7 +2461,7 @@
           "create_public_threads"
         ],
         "hoist": false
-      },,
+      },
       {
         "name": "🎯・Contributor",
         "color": "#FB5607",
@@ -2472,7 +2472,7 @@
           "create_threads"
         ],
         "hoist": false
-      },,
+      },
       {
         "name": "🤝・Collaborator",
         "color": "#00BBF9",
@@ -2484,7 +2484,7 @@
           "speak"
         ],
         "hoist": false
-      },,
+      },
       {
         "name": "🤝・Partner",
         "color": "#14B8A6",
@@ -2496,7 +2496,7 @@
           "attach_files"
         ],
         "hoist": false
-      },,
+      },
       {
         "name": "🤖・Bot",
         "color": "#5865F2",
@@ -2510,14 +2510,14 @@
         "hoist": false
       },
     ]
-  },,
+  },
   "permissionTemplates": {
     "everyone": {
       "permissions": [
         "view_channel",
         "read_message_history"
       ]
-    },,
+    },
     "verified": {
       "permissions": [
         "view_channel",
@@ -2527,7 +2527,7 @@
         "speak",
         "read_message_history"
       ]
-    },,
+    },
     "moderation": {
       "permissions": [
         "manage_messages",
@@ -2536,7 +2536,7 @@
         "moderate_members",
         "view_audit_log"
       ]
-    },,
+    },
     "administration": {
       "permissions": [
         "administrator",
@@ -2545,19 +2545,19 @@
         "manage_channels"
       ]
     },
-  },,
+  },
   "settings": {
     "verification": {
       "enabled": true,
       "method": "captcha",
       "role_given": "⭐・Verified Member"
-    },,
+    },
     "moderation": {
       "logging": true,
       "auto_mod": true,
       "anti_spam": true,
       "anti_raid": true
-    },,
+    },
     "features": {
       "leveling": true,
       "economy": true,
@@ -2565,7 +2565,7 @@
       "ai_chat": true,
       "suggestions": true
     },
-  },,
+  },
   "staffCategories": [
     {
       "name": "👑・STAFF COMMAND CENTER",
@@ -2574,29 +2574,29 @@
         {
           "name": "📢・staff-announcements",
           "type": "text"
-        },,
+        },
         {
           "name": "💬・staff-chat",
           "type": "text"
-        },,
+        },
         {
           "name": "🛡️・mod-logs",
           "type": "text"
-        },,
+        },
         {
           "name": "🔨・punishment-logs",
           "type": "text"
-        },,
+        },
         {
           "name": "📊・staff-reports",
           "type": "text"
-        },,
+        },
         {
           "name": "🔐・admin-room",
           "type": "text"
         },
       ]
-    },,
+    },
     {
       "name": "🎙️・STAFF VOICE CENTER",
       "private": true,
@@ -2604,23 +2604,23 @@
         {
           "name": "🎙️・staff-meeting",
           "type": "voice"
-        },,
+        },
         {
           "name": "🛡️・mod-discussion",
           "type": "voice"
-        },,
+        },
         {
           "name": "👑・admin-meeting",
           "type": "voice"
-        },,
+        },
         {
           "name": "🎯・planning-room",
           "type": "voice"
-        },,
+        },
         {
           "name": "🔒・private-lounge",
           "type": "voice"
-        },,
+        },
         {
           "name": "🚨・urgent-call",
           "type": "voice"
@@ -2635,110 +2635,110 @@
         {
           "name": "🌎・global-lounge",
           "type": "voice"
-        },,
+        },
         {
           "name": "🤖・ai-talks",
           "type": "voice"
-        },,
+        },
         {
           "name": "💻・coding-room",
           "type": "voice"
-        },,
+        },
         {
           "name": "📚・study-room",
           "type": "voice"
-        },,
+        },
         {
           "name": "🎤・presentation-stage",
           "type": "voice"
-        },,
+        },
         {
           "name": "🎮・gaming-room",
           "type": "voice"
         },
       ]
-    },,
+    },
     {
       "category": "🌌・AI COMMUNITY VOICE",
       "channels": [
         {
           "name": "🌙・late-night-chat",
           "type": "voice"
-        },,
+        },
         {
           "name": "🎵・music-lounge",
           "type": "voice"
-        },,
+        },
         {
           "name": "🧠・brainstorm-room",
           "type": "voice"
-        },,
+        },
         {
           "name": "🚀・innovation-talks",
           "type": "voice"
-        },,
+        },
         {
           "name": "🤝・collaboration-room",
           "type": "voice"
-        },,
+        },
         {
           "name": "🎓・ai-classroom",
           "type": "voice"
         },
       ]
-    },,
+    },
     {
       "category": "🎤・AI EVENTS STAGE",
       "channels": [
         {
           "name": "🎤・main-stage",
           "type": "stage"
-        },,
+        },
         {
           "name": "📢・community-events",
           "type": "stage"
-        },,
+        },
         {
           "name": "🏆・ai-competitions",
           "type": "stage"
-        },,
+        },
         {
           "name": "📰・ai-news-live",
           "type": "stage"
-        },,
+        },
         {
           "name": "💡・idea-presentations",
           "type": "stage"
-        },,
+        },
         {
           "name": "🌐・global-summit",
           "type": "stage"
         },
       ]
-    },,
+    },
     {
       "category": "🔊・COMMUNITY STAGES",
       "channels": [
         {
           "name": "🎙️・open-mic",
           "type": "stage"
-        },,
+        },
         {
           "name": "💬・community-talks",
           "type": "stage"
-        },,
+        },
         {
           "name": "🧠・expert-panels",
           "type": "stage"
-        },,
+        },
         {
           "name": "🚀・startup-pitches",
           "type": "stage"
-        },,
+        },
         {
           "name": "🎓・learning-sessions",
           "type": "stage"
-        },,
+        },
         {
           "name": "🌌・future-ai-events",
           "type": "stage"
@@ -2754,7 +2754,7 @@
         "administrator"
       ],
       "hoist": true
-    },,
+    },
     {
       "name": "🌌・AI Architect",
       "color": "#9D4EDD",
@@ -2765,7 +2765,7 @@
         "view_audit_log"
       ],
       "hoist": true
-    },,
+    },
     {
       "name": "💎・Executive Team",
       "color": "#FF006E",
@@ -2775,7 +2775,7 @@
         "kick_members"
       ],
       "hoist": true
-    },,
+    },
     {
       "name": "🛡️・Guardian Moderator",
       "color": "#FF006E",
@@ -2786,7 +2786,7 @@
         "view_audit_log"
       ],
       "hoist": false
-    },,
+    },
     {
       "name": "🔰・Community Helper",
       "color": "#3A86FF",
@@ -2797,7 +2797,7 @@
         "add_reactions"
       ],
       "hoist": false
-    },,
+    },
     {
       "name": "🤖・AI Expert",
       "color": "#06FFA5",
@@ -2808,7 +2808,7 @@
         "attach_files"
       ],
       "hoist": false
-    },,
+    },
     {
       "name": "💻・AI Developer",
       "color": "#00BBF9",
@@ -2818,7 +2818,7 @@
         "use_application_commands"
       ],
       "hoist": false
-    },,
+    },
     {
       "name": "🎨・AI Creator",
       "color": "#FB5607",
@@ -2829,7 +2829,7 @@
         "embed_links"
       ],
       "hoist": false
-    },,
+    },
     {
       "name": "🧠・AI Researcher",
       "color": "#8338EC",
@@ -2839,7 +2839,7 @@
         "read_message_history"
       ],
       "hoist": false
-    },,
+    },
     {
       "name": "🚀・Innovation Lead",
       "color": "#00BBF9",
@@ -2850,7 +2850,7 @@
         "manage_threads"
       ],
       "hoist": false
-    },,
+    },
     {
       "name": "🎓・AI Student",
       "color": "#8338EC",
@@ -2860,7 +2860,7 @@
         "read_message_history"
       ],
       "hoist": false
-    },,
+    },
     {
       "name": "⭐・Verified Member",
       "color": "#FFBE0B",
@@ -2873,7 +2873,7 @@
         "read_message_history"
       ],
       "hoist": false
-    },,
+    },
     {
       "name": "🌱・New Explorer",
       "color": "#06FFA5",
@@ -2884,7 +2884,7 @@
         "add_reactions"
       ],
       "hoist": false
-    },,
+    },
     {
       "name": "🏆・Achievement Hunter",
       "color": "#FFD166",
@@ -2894,7 +2894,7 @@
         "use_application_commands"
       ],
       "hoist": false
-    },,
+    },
     {
       "name": "🤝・Collaborator",
       "color": "#118AB2",
@@ -2904,7 +2904,7 @@
         "create_public_threads"
       ],
       "hoist": false
-    },,
+    },
     {
       "name": "💬・Active Member",
       "color": "#90BE6D",
@@ -2915,7 +2915,7 @@
         "add_reactions"
       ],
       "hoist": false
-    },,
+    },
     {
       "name": "🌱・Community Member",
       "color": "#06FFA5",
@@ -2925,7 +2925,7 @@
         "read_message_history"
       ],
       "hoist": false
-    },,
+    },
     {
       "name": "👀・Visitor",
       "color": "#ADB5BD",
@@ -2948,7 +2948,7 @@
         "connect",
         "speak"
       ]
-    },,
+    },
     "staff": {
       "moderators": [
         "manage_messages",
@@ -2958,7 +2958,7 @@
       "admins": [
         "administrator"
       ]
-    },,
+    },
     "privateCategories": [
       {
         "name": "👑・STAFF COMMAND CENTER",
@@ -2968,7 +2968,7 @@
           "Executive Team",
           "Guardian Moderator"
         ]
-      },,
+      },
       {
         "name": "🔐・ADMIN AREA",
         "access": [
@@ -2976,7 +2976,7 @@
           "AI Architect",
           "Administrator"
         ]
-      },,
+      },
       {
         "name": "🛡️・MODERATION HQ",
         "access": [
@@ -2985,7 +2985,7 @@
         ]
       },
     ]
-  },,
+  },
   "serverFeatures": {
     "verificationSystem": true,
     "autoModeration": true,
