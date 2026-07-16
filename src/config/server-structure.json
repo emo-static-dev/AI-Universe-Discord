@@ -1,0 +1,349 @@
+{
+  "serverName": "🌌 AI UNIVERSE",
+  "serverDescription": "The world's biggest AI-focused Discord community",
+  "categories": [
+    {
+      "id": "hub",
+      "name": "🌌・AI UNIVERSE HUB",
+      "channels": [
+        {
+          "name": "👋・welcome-to-ai-universe",
+          "type": "text",
+          "description": "Welcome to the AI Universe! Start your journey here."
+        },
+        {
+          "name": "📜・universe-rules",
+          "type": "text",
+          "description": "Community guidelines and rules for AI Universe."
+        },
+        {
+          "name": "📢・official-announcements",
+          "type": "text",
+          "description": "Important announcements and updates."
+        },
+        {
+          "name": "📰・ai-news-feed",
+          "type": "text",
+          "description": "Latest AI news and breakthroughs."
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "name": "🤖・AI CORE LAB",
+      "channels": [
+        {
+          "name": "🤖・ai-general-chat",
+          "type": "text",
+          "description": "General AI discussions and conversations."
+        },
+        {
+          "name": "🧠・future-of-ai",
+          "type": "text",
+          "description": "Discussions about the future of AI technology."
+        },
+        {
+          "name": "🪄・prompt-galaxy",
+          "type": "text",
+          "description": "Share and discuss AI prompts."
+        },
+        {
+          "name": "🔥・ai-trends",
+          "type": "text",
+          "description": "Current AI trends and hot topics."
+        }
+      ]
+    },
+    {
+      "id": "creative",
+      "name": "🎨・CREATIVE AI STUDIO",
+      "channels": [
+        {
+          "name": "🖼️・ai-art-gallery",
+          "type": "text",
+          "description": "AI-generated art and visual creations."
+        },
+        {
+          "name": "🎬・ai-video-studio",
+          "type": "text",
+          "description": "AI video generation and editing."
+        },
+        {
+          "name": "✍️・ai-writing-lab",
+          "type": "text",
+          "description": "AI-assisted writing and content creation."
+        },
+        {
+          "name": "🎵・ai-music-realm",
+          "type": "text",
+          "description": "AI music composition and generation."
+        }
+      ]
+    },
+    {
+      "id": "developer",
+      "name": "💻・DEVELOPER MATRIX",
+      "channels": [
+        {
+          "name": "💻・coding-hub",
+          "type": "text",
+          "description": "General coding discussions and help."
+        },
+        {
+          "name": "🐍・python-lab",
+          "type": "text",
+          "description": "Python programming and AI libraries."
+        },
+        {
+          "name": "⚡・javascript-zone",
+          "type": "text",
+          "description": "JavaScript and Node.js development."
+        },
+        {
+          "name": "🔧・dev-tools",
+          "type": "text",
+          "description": "Developer tools and resources."
+        }
+      ]
+    },
+    {
+      "id": "academy",
+      "name": "🎓・AI ACADEMY",
+      "channels": [
+        {
+          "name": "📚・learning-resources",
+          "type": "text",
+          "description": "Educational resources and tutorials."
+        },
+        {
+          "name": "🧑‍🎓・courses-discussion",
+          "type": "text",
+          "description": "Discuss AI courses and certifications."
+        },
+        {
+          "name": "❓・beginner-questions",
+          "type": "text",
+          "description": "Questions for beginners in AI."
+        },
+        {
+          "name": "🎯・advanced-topics",
+          "type": "text",
+          "description": "Advanced AI concepts and research."
+        }
+      ]
+    },
+    {
+      "id": "marketplace",
+      "name": "🛠️・AI TOOL MARKET",
+      "channels": [
+        {
+          "name": "🏪・tool-showcase",
+          "type": "text",
+          "description": "Showcase AI tools and services."
+        },
+        {
+          "name": "💰・marketplace",
+          "type": "text",
+          "description": "Buy, sell, and trade AI services."
+        },
+        {
+          "name": "🤝・partnerships",
+          "type": "text",
+          "description": "Partnership and collaboration opportunities."
+        },
+        {
+          "name": "📊・pricing-discussion",
+          "type": "text",
+          "description": "Discuss pricing and monetization."
+        }
+      ]
+    },
+    {
+      "id": "innovation",
+      "name": "🚀・INNOVATION LAB",
+      "channels": [
+        {
+          "name": "💡・ideas-vault",
+          "type": "text",
+          "description": "Share innovative AI ideas."
+        },
+        {
+          "name": "🧪・experiments",
+          "type": "text",
+          "description": "Discuss experiments and projects."
+        },
+        {
+          "name": "🏆・ai-challenges",
+          "type": "text",
+          "description": "Compete in AI challenges."
+        },
+        {
+          "name": "📈・showcase-projects",
+          "type": "text",
+          "description": "Showcase completed AI projects."
+        }
+      ]
+    },
+    {
+      "id": "community",
+      "name": "🌍・GLOBAL COMMUNITY",
+      "channels": [
+        {
+          "name": "🎉・community-giveaways",
+          "type": "text",
+          "description": "Participate in community giveaways."
+        },
+        {
+          "name": "🎊・events",
+          "type": "text",
+          "description": "Community events and meetups."
+        },
+        {
+          "name": "👥・introductions",
+          "type": "text",
+          "description": "Introduce yourself to the community."
+        },
+        {
+          "name": "💬・general-chat",
+          "type": "text",
+          "description": "Off-topic general conversation."
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "name": "🏢・AI BUSINESS DISTRICT",
+      "channels": [
+        {
+          "name": "📱・startups",
+          "type": "text",
+          "description": "AI startup discussions."
+        },
+        {
+          "name": "💼・enterprise",
+          "type": "text",
+          "description": "Enterprise AI solutions."
+        },
+        {
+          "name": "📊・analytics",
+          "type": "text",
+          "description": "Data analytics and business intelligence."
+        },
+        {
+          "name": "🎯・strategy",
+          "type": "text",
+          "description": "Business strategy and planning."
+        }
+      ]
+    },
+    {
+      "id": "voice",
+      "name": "🎙️・VOICE UNIVERSE",
+      "channels": [
+        {
+          "name": "🎙️・general-voice",
+          "type": "voice",
+          "description": "General voice chat."
+        },
+        {
+          "name": "🎧・gaming",
+          "type": "voice",
+          "description": "Gaming voice channel."
+        },
+        {
+          "name": "🎤・events",
+          "type": "voice",
+          "description": "Voice events and presentations."
+        }
+      ]
+    },
+    {
+      "id": "staff",
+      "name": "👑・STAFF COMMAND CENTER",
+      "channels": [
+        {
+          "name": "🛡️・moderator-logs",
+          "type": "text",
+          "description": "Moderation action logs.",
+          "private": true
+        },
+        {
+          "name": "📋・staff-announcements",
+          "type": "text",
+          "description": "Staff team announcements.",
+          "private": true
+        },
+        {
+          "name": "💬・staff-discussion",
+          "type": "text",
+          "description": "Private staff discussions.",
+          "private": true
+        },
+        {
+          "name": "🔐・admin-only",
+          "type": "text",
+          "description": "Admin-only channel.",
+          "private": true
+        }
+      ]
+    }
+  ],
+  "roles": {
+    "hierarchy": [
+      {
+        "name": "👑・Universe Founder",
+        "color": "#FFD700",
+        "permissions": ["administrator"],
+        "tier": "owner"
+      },
+      {
+        "name": "🌌・AI Architect",
+        "color": "#9D4EDD",
+        "permissions": ["manage_guild", "manage_roles", "manage_channels"],
+        "tier": "owner"
+      },
+      {
+        "name": "💎・Elite Member",
+        "color": "#3A86FF",
+        "permissions": ["send_messages", "read_messages"],
+        "tier": "elite"
+      },
+      {
+        "name": "🤖・AI Explorer",
+        "color": "#06FFA5",
+        "permissions": ["send_messages", "read_messages"],
+        "tier": "member"
+      },
+      {
+        "name": "🧠・AI Mastermind",
+        "color": "#FF006E",
+        "permissions": ["send_messages", "read_messages"],
+        "tier": "expert"
+      },
+      {
+        "name": "💻・AI Developer",
+        "color": "#00BBF9",
+        "permissions": ["send_messages", "read_messages"],
+        "tier": "specialist"
+      },
+      {
+        "name": "🎨・AI Creator",
+        "color": "#FB5607",
+        "permissions": ["send_messages", "read_messages"],
+        "tier": "specialist"
+      },
+      {
+        "name": "🛡️・Guardian Moderator",
+        "color": "#FF006E",
+        "permissions": ["kick_members", "ban_members", "moderate_members"],
+        "tier": "moderator"
+      },
+      {
+        "name": "⭐・Verified Member",
+        "color": "#FFBE0B",
+        "permissions": ["send_messages", "read_messages"],
+        "tier": "verified"
+      }
+    ]
+  }
+}
